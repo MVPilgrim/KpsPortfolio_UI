@@ -29,14 +29,17 @@ a:hover, a:active {
 
 .NavMenu {
   height: 93.5%;
-  width: 8.5%;
-  font-size: 16px;
+  width: 9.0%;
+  font-size: 12px;
   position: absolute;
   top: 6.5%;
   left: 0;
   background-color: #999999;
   border: 0;
-  align-content: left;
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  justify-content: left;
 }
 
 .App-flex {
