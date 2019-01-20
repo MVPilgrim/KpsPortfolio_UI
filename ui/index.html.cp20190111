@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>KPS Portfolio</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <!-- Load React. -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+<!-- marginRight: spacing + 'em'-->
+<!-- height: 50px;width: 300px;border: 2px solid gray; -->
+
+
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+      var bgColors = {"Default": "#81b71a",
+                      "Blue": "#00B1E1",
+                      "Cyan": "#37BC9B",
+                      "Green": "#8CC152",
+                      "Red": "#E9573F",
+                      "Yellow": "#F6BB42",
+      };
+
+      class MainWindow extends React.Component {
+        render() {
+          return (
+            <div>
+              <div name="topBar" style={{position: 'absolute'},{top: '0px'},{left: '0px'},{height:'550px'},{width:'200px'},{border:'2px solid red'}}>
+              </div>
+              <div style={{height:'500px'},{width:'100px'},{border:'2px solid gray'}}>
+                <NavPane />
+              </div>
+           </div>
+          );
+        }
+      }
+
+      class NavPane extends React.Component {
+        renderNavItem(item) {
+          return (
+            <div className={item}>
+               <a href="about.html">{item}</a>
+            </div>
+          );
+        }
+        render() {
+          return (
+            <div name="navPane" style={{position: 'absolute'},{top: '50px'},{left: '0px'},{height:'500px'},{width:'150px'},{border:'2px solid green'}}>
+              {this.renderNavItem("About")}
+            </div>
+          );
+        }
+      }
+
+      class DemoPane extends React.Component {
+        render() {
+          return (
+             <div>
+               <iframe name="demoPane" style={{position: 'absolute'},{top: '50px'},{left: '150px'},{height:'600px'},{width:'400px'},{border:'2px solid green'}}>
+              </iframe>
+            </div>
+          );
+        }
+      }
+    </script>
+
+    <script type="text/babel">
+      ReactDOM.render(<MainWindow />, document.getElementById("root"));
+      //ReactDOM.render(<h1>Hello, world!</h1>, document.getElementById("root"));
+    </script>
+
+  </body>
+</html>
+
