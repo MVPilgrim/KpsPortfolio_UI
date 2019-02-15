@@ -6,7 +6,7 @@
   "scripts": {
     "build": "nwb build-react-app",
     "clean": "nwb clean-app",
-    "start": "nwb --host ec2-52-86-107-14.compute-1.amazonaws.com --port 3000 serve-react-app",
+    "start": "nwb --host 172.31.86.166 --port 3000 serve-react-app",
     "test": "nwb test-react",
     "test:coverage": "nwb test-react --coverage",
     "test:watch": "nwb test-react --server"
