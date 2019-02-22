@@ -1,0 +1,117 @@
+html, body, #app {
+  height: 100%;
+}
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  height: 100%;
+  width: 100%;
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+}
+
+a:link, a:visited {
+  color: white;
+  text-align: left;
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  color: lightblue;
+}
+
+.TopBar {
+  height: 6.5%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color :lightblue;
+  border: 0;
+}
+
+.NavMenu {
+  height: 93.5%;
+  width: 9.0%;
+  font-size: 12px;
+  position: fixed;
+  top: 6.5%;
+  left: 0;
+  background-color: #999999;
+  border: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+}
+
+.MainView {
+  height: 93.5%;
+  width: 91.0%;
+  position: fixed;
+  top: 6.5%;
+  left: 9.0%;
+  background-color: #ffe0b3;
+  border: 0;
+}
+
+.DoistDemo {
+  height: 93.5%;
+  width: 45.5%;
+  position: fixed;
+  top: 6.5%;
+  left: 9.0%;
+  background-color: #ffffff;
+  border-style: solid;
+  border-color: #808080;
+  border-width: 2px;
+}
+
+.Todoist {
+  height: 46.5%;
+  width: 45.0%;
+  position: fixed;
+  top: 6.5%;
+  left: 54.5%;
+  background-color: #ffffff;
+  border-style: solid;
+  border-color: #808080;
+  border-width: 2px;
+}
+
+.Twist {
+  height: 46.5%;
+  width: 45.0%;
+  position: fixed;
+  top: 53.0%;
+  left: 54.5%;
+  background-color: #ffffff;
+  border-style: solid;
+  border-color: #808080;
+  border-width: 2px;
+}
+
+
+/*# sourceMappingURL=app.5fe39585.css.map*/
