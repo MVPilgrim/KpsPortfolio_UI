@@ -1,3 +1,0 @@
-# DoistHelloWorld
-
-Describe DoistHelloWorld here.
