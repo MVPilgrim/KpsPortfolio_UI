@@ -48,7 +48,8 @@ http.createServer(function (req, res) {
 }).listen(10000,"0.0.0.0");
 
 function findConn(body) {
-  result = body.match(/Doist.Demo.wsid%3D(..*)%5D%28/)
+  //result = body.match(/Doist.Demo.wsid%3D(..*)%5D%28/)
+  result = body.match(/Doist.Demo.wsid%3D(..*)%5D/)
   if (result == null || result.index < 0) {
     console.log("Received non-DoistDemo msg. Discarding. Msg: " + body);
     return null
