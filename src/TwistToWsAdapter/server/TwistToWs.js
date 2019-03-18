@@ -1,7 +1,8 @@
 var http = require('http');
-const WebSocket = require('ws')
+var qs = require('querystring');
+const websocket = require('ws')
 
-const wss = new WebSocket.Server({ port: 10001 })
+const wss = new websocket.Server({ port: 10001 })
 
 wsconnections = []
 
@@ -37,7 +38,7 @@ http.createServer(function (req, res) {
     } else{
       console.log("ws: is null")
       resCode = "500"
-      resEndCode = "bad"
+      resEndCode = "BAD"
     }
     res.writeHead(resCode, {'Content-Type': 'application/json'});
     res.write('' ); 
@@ -48,8 +49,10 @@ http.createServer(function (req, res) {
 }).listen(10000,"0.0.0.0");
 
 function findConn(body) {
-  //result = body.match(/Doist.Demo.wsid%3D(..*)%5D%28/)
-  result = body.match(/Doist.Demo.wsid%3D(..*)%5D/)
+  body = qs.unescape(body)
+  console.log("findConn(() body: " + body);
+  result = body.match(/wsid=\"([0-9][0-9]*)\"/)
+  console.log("findConn(() result: " + result);
   if (result == null || result.index < 0) {
     console.log("Received non-DoistDemo msg. Discarding. Msg: " + body);
     return null

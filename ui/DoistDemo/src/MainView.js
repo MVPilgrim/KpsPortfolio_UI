@@ -8,8 +8,8 @@ export default class MainView extends Component {
 
   render() {
     return(
-      <div ref={this.mainViewRef}>
-        <iframe name="MainView" className="MainView" src="src/MainView.html"/>
+      <div className="MainView" ref={this.mainViewRef}>
+        <img src={require("./Images/SWdevelop_Words.jpg")} height={"100%"} width={"100%"}/>
      </div>
     );
   }
