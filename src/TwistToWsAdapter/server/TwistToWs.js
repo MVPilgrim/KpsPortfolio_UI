@@ -7,15 +7,27 @@ const wss = new websocket.Server({ port: 10001 })
 wsconnections = []
 
 wss.on('connection', (ws,req) => {
-  console.log("req.url: " + req.url)
+  log("req.url: " + req.url)
   wsid = req.url.substr(10,req.url.length - 13)
-  console.log("wsid=" + wsid)
+  log("wsid=" + wsid)
   wsconn = new Object()
   wsconn.wsid = wsid
   wsconn.ws = ws
   wsconnections.push(wsconn)
+
   ws.on('message', (message) => {
-    console.log(`Received message => ${message}`)
+    log(`Received message => ${message}`)
+  })
+
+  ws.on('close', (eventData) => {
+    log('Close connection received.');
+    for(var i=0;i<wsconnections.length;i++) {
+      log("wsconnections[" + i + "].wsid: " + wsconnections[i].wsid)
+      if (wsconnections[i].ws == ws) {
+        log("Removing wsconnections[" + i + "].wsid: " + wsconnections[i].wsid)
+        wsconnections.splice(i,1)
+      }
+    }
   })
 })
 
@@ -30,13 +42,15 @@ http.createServer(function (req, res) {
     resCode = "200"
     resEndCode = "ok"
 
-    console.log(body);
-    ws = findConn(body);
-    if (ws != null) {
-      console.log("ws: not null")
-      ws.send(body)
+    log(body);
+    wsconn = findConn(body);
+    if (wsconn != null) {
+      log("Found existing connection: " + wsconn.wsid)
+      body = body.replace(/&/g,", ")
+      dt = getTimeStamp()
+      wsconn.ws.send(dt + ' ' + body)
     } else{
-      console.log("ws: is null")
+      log("Did not find connection in list.")
       resCode = "500"
       resEndCode = "BAD"
     }
@@ -50,21 +64,31 @@ http.createServer(function (req, res) {
 
 function findConn(body) {
   body = qs.unescape(body)
-  console.log("findConn(() body: " + body);
+  //log("findConn(() body: " + body);
   result = body.match(/wsid=\"([0-9][0-9]*)\"/)
-  console.log("findConn(() result: " + result);
+  //log("findConn(() result: " + result);
   if (result == null || result.index < 0) {
-    console.log("Received non-DoistDemo msg. Discarding. Msg: " + body);
+    log("Received old or non-DoistDemo msg. Discarding. Msg: " + body);
     return null
   }
 
   wsid = result[1];
-  console.log("parsed wsid: " + wsid)
+  log("parsed wsid: " + wsid)
   for(var i=0;i<wsconnections.length;i++) {
-    console.log("wsconnections[i].wsid: " + wsconnections[i].wsid)
+    log("wsconnections[" + i + "].wsid: " + wsconnections[i].wsid)
     if (wsconnections[i].wsid == wsid) {
-      return wsconnections[i].ws
+      return wsconnections[i]
     }
   }
   return null
+}
+
+function getTimeStamp() {
+  dt = new Date().toISOString()
+  return dt
+}
+
+function log(msg) {
+  dt = getTimeStamp()
+  console.log(dt + ": " + msg)
 }

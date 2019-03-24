@@ -23,16 +23,8 @@ a:hover, a:active {
   position: fixed;
   top: 0;
   left: 0;
-  background-color :lightblue;
+  background-color: #343434;
   border: 0;
-}
-
-h1 {
-  top: 20.0%;
-}
-
-.PageHeading {
-  top: 20.0%;
 }
 
 .NavMenu {
@@ -48,10 +40,11 @@ h1 {
   align-items: left;
   flex-direction: column;
   justify-content: left;
+  overflow: hidden;
 }
 
 .MainView {
-  height: 93.5%;
+  height: 92.5%;
   width: 91.0%;
   position: fixed;
   top: 6.5%;
@@ -63,7 +56,7 @@ h1 {
 
 .DoistDemo {
   height: 93.5%;
-  width: 45.5%;
+  width: 44.0%;
   position: fixed;
   top: 6.5%;
   left: 9.0%;
@@ -71,49 +64,83 @@ h1 {
   border-style: solid;
   border-color: #808080;
   border-width: 2px;
+  overflow: scroll;
 }
 
 .DoistDemoTopBar {
   height: 5.1%;
-  width: 100%;
+  width: 45.5%;
   position: fixed;
   top: 6.5%;
   left: 9.0%;
-  background-color: darkgreen;
+  background-color: darkcyan;
   border: 2 solid black;
 }
 
 .DoistDemoButton {
-  height: 4.0%;
-  width: 38px;
+  height: 22px;
+  width: 40px;
   position: fixed;
-  top: 7.1%;
+  top: 7.4%;
   left: 9.5%;
-  background-color: lightgreen;
-  font-size: x-small;
+  background-color: darkcyan;
+  border: none;
+  color: white;
+  padding: 1px 1px;
   text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 1px 1px;
+  cursor: pointer;
 }
 
 .Todoist {
   height: 46.5%;
-  width: 45.0%;
+  width: 47.0%;
   position: fixed;
   top: 6.5%;
-  left: 54.5%;
+  left: 53.0%;
   background-color: #ffffff;
   border-style: solid;
   border-color: #808080;
   border-width: 2px;
+  overflow: hidden;
 }
 
 .Twist {
   height: 46.5%;
-  width: 45.0%;
+  width: 47.0%;
   position: fixed;
   top: 53.0%;
-  left: 54.5%;
+  left: 53.0%;
   background-color: #ffffff;
   border-style: solid;
   border-color: #808080;
   border-width: 2px;
+  overflow: hidden;
+}
+
+h1 {
+  text-align: center;
+  color: #5a5a5a;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2em;
+}
+
+.PageHeading {
+  text-align: center;
+  color: #505050;
+  font-family: Arial, Helvetica, serif;
+  font-size: 2em;
+  
+}
+
+.TextBody {
+  text-align: justify;
+  text-justify: inter-word;
+  color: #4d4d4d;
+  font-family: Arial, Helvetica, serif;
+  font-size: 1.3em;
+  margin: 0px 350px 0px 350px;
 }

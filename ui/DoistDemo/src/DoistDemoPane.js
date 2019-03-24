@@ -8,7 +8,7 @@ export default class DoistDemoPane extends Component {
     this.handleInitButtonClick = this.handleInitButtonClick.bind(this);
     this.chkForStartMsg = this.chkForStartMsg.bind(this);
     this.state = {
-      msgArray : ["empty"],
+      msgArray : [],
       ws : ""
     }
   }
@@ -81,7 +81,7 @@ export default class DoistDemoPane extends Component {
     }
     xhttp.open("POST", "http://kpsportfolio.info/lambda/trigger", true);
     xhttp.setRequestHeader("Content-type", "application/json");
-    var ws = "{\"cmd\": \"invoke services\", \"wsid\": " + wsid + "}";
+    var ws = "{\"cmd\": \"invoke services\", \"wsid\": \"" + wsid + "\"}";
     console.log("xhttp.send() ws: " + ws)
     xhttp.send(ws);
   }
@@ -100,9 +100,9 @@ export default class DoistDemoPane extends Component {
       <div>
         <TopBar className="DoistDemoTopBar"/>
         <h1 className="PageHeading">Doist Demo UI</h1>
-        <Button label="About" handleClick={this.handleAboutButtonClick}/>
-        <Button label="Init Demo" style={{"left": "190px", "width": "55px"}} handleClick={this.handleInitButtonClick}/>
-        <Button label="Directions" style={{"left": "253px", "width": "55px"}} handleClick={this.handleDirectionsButtonClick}/>
+        <Button label="Init Demo" style={{"width": "60px"}} handleClick={this.handleInitButtonClick}/>
+        <Button label="Directions" style={{"left": "13.5%", "width": "60px"}} handleClick={this.handleDirectionsButtonClick}/>
+        <Button label="About" style={{"left": "17.5%"}}handleClick={this.handleAboutButtonClick}/>
         <DisplayMsg msgArray={this.state.msgArray}/>
      </div>
     );
@@ -112,12 +112,19 @@ export default class DoistDemoPane extends Component {
 
 class DisplayMsg extends Component {
   render() {
-    return(
-      <ul>
+    var retEle = (<p/>)
+    if (this.props.msgArray.length > 0) {
+      retEle =  (<ul>
         {this.props.msgArray.map((item,index) => 
           <li key={index}>{item}</li>
         )}
-      </ul>
+      </ul>)
+    }
+
+    return(
+      <div>
+        {retEle}
+      </div>
     );
   }
 }

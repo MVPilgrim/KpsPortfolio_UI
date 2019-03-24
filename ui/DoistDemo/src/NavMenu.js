@@ -26,7 +26,33 @@ export default class NavMenu extends Component {
         <TopBar className="TopBar"/>
         <NavMenu/>
         <div className="MainView">
-          <h1>About KpsPortfolio</h1>
+          <h1 className="PageHeading">About KpsPortfolio</h1>
+          <p className="TextBody">
+            This website is a portfolio of software projects and demonstrations along with miscellaneous, interesting 
+            but different artifcats.
+            This website is a portfolio of software projects and demonstrations along with miscellaneous, interesting 
+            but different artifcats.
+            This website is a portfolio of software projects and demonstrations along with miscellaneous, interesting 
+            but different artifcats.
+            This website is a portfolio of software projects and demonstrations along with miscellaneous, interesting 
+            but different artifcats.
+            This website is a portfolio of software projects and demonstrations along with miscellaneous, interesting 
+            but different artifcats.
+            This website is a portfolio of software projects and demonstrations along with miscellaneous, interesting 
+            but different artifcats.
+          </p>
+          <p className="TextBody">
+            The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
+            The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
+            The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
+            The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
+            The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
+            The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
+            The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
+            The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
+          </p>
+          <p className="TextBody">
+          </p>
         </div>
       </div>,
       this.targetContainer
@@ -40,6 +66,16 @@ export default class NavMenu extends Component {
         <NavMenu/>
         <div className="MainView">
           <h1>The Gospel</h1>
+            <p className="TextBody">
+              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
+              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
+              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
+              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
+              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
+              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
+              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
+              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
+            </p>
         </div>
       </div>,
       this.targetContainer
@@ -64,6 +100,16 @@ export default class NavMenu extends Component {
         <NavMenu/>
         <div className="MainView">
           <h1>Virtual Support</h1>
+            <p className="TextBody">
+              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
+              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
+              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
+              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
+              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
+              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
+              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
+              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
+            </p>
         </div>
       </div>,
       this.targetContainer
@@ -77,6 +123,16 @@ export default class NavMenu extends Component {
         <NavMenu/>
         <div className="MainView">
           <h1>Wise Eliza</h1>
+            <p className="TextBody">
+              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
+              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
+              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
+              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
+              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
+              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
+              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
+              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
+            </p>
         </div>
       </div>,
       this.targetContainer
@@ -90,6 +146,16 @@ export default class NavMenu extends Component {
         <NavMenu/>
         <div className="MainView">
           <h1>Childlike Homepage</h1>
+            <p className="TextBody">
+              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
+              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
+              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
+              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
+              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
+              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
+              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
+              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
+            </p>
         </div>
       </div>,
       this.targetContainer
