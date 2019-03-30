@@ -7,7 +7,7 @@ export default class DoistDemoMain extends Component {
   render() {
     return(
       <div>
-        <div name="DoistDemoPane" className="DoistDemo">
+        <div name="DoistDemoPane" className="DoistDemoPane">
           <DoistDemoPane/>
         </div>
         <iframe name="Todoist" className="Todoist" src="https://todoist.com"/>

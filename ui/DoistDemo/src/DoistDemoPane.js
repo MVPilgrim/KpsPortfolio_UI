@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import ReactDOM, {DOMComponent} from 'react-dom'
 import TopBar from './TopBar.js'
 import Button from './Button.js'
 
@@ -99,10 +100,10 @@ export default class DoistDemoPane extends Component {
     return(
       <div>
         <TopBar className="DoistDemoTopBar"/>
-        <h1 className="PageHeading">Doist Demo UI</h1>
         <Button label="Init Demo" style={{"width": "60px"}} handleClick={this.handleInitButtonClick}/>
         <Button label="Directions" style={{"left": "13.5%", "width": "60px"}} handleClick={this.handleDirectionsButtonClick}/>
         <Button label="About" style={{"left": "17.5%"}}handleClick={this.handleAboutButtonClick}/>
+        <div className="DoistDemoHeading">Doist Demo UI</div>
         <DisplayMsg msgArray={this.state.msgArray}/>
      </div>
     );
@@ -111,18 +112,43 @@ export default class DoistDemoPane extends Component {
 
 
 class DisplayMsg extends Component {
+  constructor(props) {
+    super(props);
+    /* this.scrollToBottom = this.scrollToBottom.bind(this); */
+  }
+
+  /*
+  componentDidUpdate () {
+    console.log("DoistDemoPane.componentDidUpdate() entered.")
+    this.scrollToBottom()
+  }
+  */
+
+  /* Haven't found a good solution yet.
+  scrollToBottom = () => {
+    console.log("DoistDemoPane.scrollToBottom() entered.")
+
+    const logContainer = ReactDOM.findDOMNode(this.logContainer);
+    logContainer.scrollTop = logContainer.scrollHeight;
+
+    console.log("DoistDemoPane.scrollToBottom() exited. logContainer.scrollTop= " + logContainer.scrollTop)
+  }
+  */
+
   render() {
     var retEle = (<p/>)
     if (this.props.msgArray.length > 0) {
-      retEle =  (<ul>
-        {this.props.msgArray.map((item,index) => 
-          <li key={index}>{item}</li>
-        )}
-      </ul>)
+      retEle = (
+        <ul className="DisplayLog">
+          {this.props.msgArray.map((item,index) => 
+            <li key={index}>{item}</li>
+          )}
+        </ul>
+      )
     }
 
     return(
-      <div>
+      <div ref={(el) => { this.logContainer = el; }}>
         {retEle}
       </div>
     );

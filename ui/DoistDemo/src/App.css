@@ -54,7 +54,7 @@ a:hover, a:active {
   text-align: center;
 }
 
-.DoistDemo {
+.DoistDemoPane {
   height: 93.5%;
   width: 44.0%;
   position: fixed;
@@ -64,7 +64,6 @@ a:hover, a:active {
   border-style: solid;
   border-color: #808080;
   border-width: 2px;
-  overflow: scroll;
 }
 
 .DoistDemoTopBar {
@@ -75,6 +74,16 @@ a:hover, a:active {
   left: 9.0%;
   background-color: darkcyan;
   border: 2 solid black;
+}
+
+.DoistDemoHeading {
+  top: 12.0%;
+  left: 25.0%;
+  position: fixed;
+  text-align: center;
+  color: #5a5a5a;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2em;
 }
 
 .DoistDemoButton {
@@ -121,6 +130,15 @@ a:hover, a:active {
   overflow: hidden;
 }
 
+.DisplayLog {
+  top: 15.0%;
+  left: 9.4%;
+  height: 83.5%;
+  width: 41.0%;
+  position: fixed;
+  overflow: scroll;
+}
+
 h1 {
   text-align: center;
   color: #5a5a5a;
@@ -132,7 +150,7 @@ h1 {
   text-align: center;
   color: #505050;
   font-family: Arial, Helvetica, serif;
-  font-size: 2em;
+  font-size: 4em;
   
 }
 
@@ -143,4 +161,107 @@ h1 {
   font-family: Arial, Helvetica, serif;
   font-size: 1.3em;
   margin: 0px 350px 0px 350px;
+}
+
+.KpsPhoto {
+  height: 216px;
+  width: 228px;
+  position: fixed;
+  top: 9.0%;
+  left: 12.0%;
+}
+
+.GospelHeading {
+  text-align: center;
+  color: #505050;
+  font-family: Arial, Helvetica, serif;
+  font-size: 2em;
+}
+
+.GospelText {
+  text-align: center;
+  color: crimson;
+  font-family: Arial, Helvetica, serif;
+  font-size: 1.5em;
+}
+
+.GospelEpilog {
+  text-align: center;
+  color: black;
+  font-family: "Arial Black", Helvetica, serif;
+  font-size: 2em;
+}
+
+.GospelResources {
+  margin: 0px 350px 0px 350px;
+  text-align: center;
+  color: black;
+  font-family: "Times New Roman", Helvetica, serif;
+  font-size: 1.3em;
+}
+
+a.Gospel:link {
+  color: black;
+}
+a.Gospel:visited {
+  color: black;
+}
+a.Gospel:hover {
+  color: red;
+}
+
+.GospelPrayer {
+  text-align: justify;
+  text-justify: inter-word;
+  color: #4d4d4d;
+  font-family: Arial, Helvetica, serif;
+  font-size: 1.3em;
+  margin: 0px 400px 0px 400px;
+}
+
+[gospel-tooltip]:hover {
+	position: relative;
+}
+[gospel-tooltip]:hover::before {
+	all: initial;
+	font-family: Arial, Helvetica, sans-serif;
+	display: inline-block;
+	border-radius: 5px;
+	padding: 10px;
+	#background-color: #1a1a1a;
+	background-color: #e00000;
+	content: attr(gospel-tooltip);
+	color: #f9f9f9;
+	position: absolute;
+	bottom: auto;
+	width: 150px;
+	left: auto;
+	#transform: translate(-50%, 0);
+	transform: translate(0, -50%);
+	margin-bottom: 0px;
+	text-align: center;
+	font-size: 14px;
+	right: 100%;
+	top: 50%;
+	margin-right: 15px;
+}
+[gospel-tooltip]:hover::after {
+	all: initial;
+	display: inline-block;
+	width: 0; 
+	height: 0; 
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;		  
+	border-top: 10px solid #1a1a1a;
+	position: absolute;
+	bottom: auto;
+	content: '';
+	left: auto;
+        right: 100%;
+	#transform: translate(-50%, 0);
+        transform: rotate(-90deg) translate(0, -50%);
+	margin-bottom: 0;
+        top: 50%;
+        margin-right: -5px;
+	margin-top: -5px;
 }
