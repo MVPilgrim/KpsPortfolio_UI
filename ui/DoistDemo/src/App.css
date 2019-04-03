@@ -265,3 +265,10 @@ a.Gospel:hover {
         margin-right: -5px;
 	margin-top: -5px;
 }
+
+.DDPopup {
+  position: absolute;
+  left: 300px;
+  top: 300px;
+  z-index: 99;
+}

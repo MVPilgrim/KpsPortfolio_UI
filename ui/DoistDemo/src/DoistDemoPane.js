@@ -2,15 +2,22 @@ import React, {Component} from 'react'
 import ReactDOM, {DOMComponent} from 'react-dom'
 import TopBar from './TopBar.js'
 import Button from './Button.js'
+import DDPopup from './DDPopup.js'
 
 export default class DoistDemoPane extends Component {
   constructor(props) {
     super(props);
-    this.handleInitButtonClick = this.handleInitButtonClick.bind(this);
-    this.chkForStartMsg = this.chkForStartMsg.bind(this);
+    this.handleInitButtonClick       = this.handleInitButtonClick.bind(this);
+    this.chkForStartMsg              = this.chkForStartMsg.bind(this);
+    this.handleAboutButtonClick      = this.handleAboutButtonClick.bind(this)
+    this.handleDirectionsButtonClick = this.handleDirectionsButtonClick.bind(this)
+    this.closeAbout                  = this.closeAbout.bind(this)
+    this.returnAboutContent          = this.returnAboutContent.bind(this)
+
     this.state = {
       msgArray : [],
-      ws : ""
+      ws : "",
+      displayAbout : false
     }
   }
 
@@ -88,7 +95,11 @@ export default class DoistDemoPane extends Component {
   }
 
   handleAboutButtonClick(event) {
-    alert("handleAboutButtonClick() entered.")
+    /* alert("handleAboutButtonClick() entered.") */
+    this.setState({displayAbout: true})
+  }
+  closeAbout(event) {
+    this.setState({displayAbout: false})
   }
 
   handleDirectionsButtonClick(event) {
@@ -96,15 +107,28 @@ export default class DoistDemoPane extends Component {
 
   }
 
+  returnAboutContent() {
+    console.log("returnAboutContent() entered.")
+    var retEle = '<div className="DDPopup">'
+    retEle +=  '<h1 style={{"font-size": "4em"}}>DDPopupAbout</h1>'
+    retEle +=  '<p/>'
+    retEle += '</div>'
+
+    console.log("returnAboutContent() retEle: " + retEle)
+    return(retEle)
+  }
+
   render() {
+
     return(
       <div>
         <TopBar className="DoistDemoTopBar"/>
         <Button label="Init Demo" style={{"width": "60px"}} handleClick={this.handleInitButtonClick}/>
         <Button label="Directions" style={{"left": "13.5%", "width": "60px"}} handleClick={this.handleDirectionsButtonClick}/>
-        <Button label="About" style={{"left": "17.5%"}}handleClick={this.handleAboutButtonClick}/>
+        <Button label="About" style={{"left": "17.5%"}} handleClick={this.handleAboutButtonClick}/>
         <div className="DoistDemoHeading">Doist Demo UI</div>
         <DisplayMsg msgArray={this.state.msgArray}/>
+        <DDPopup displayPopup={this.state.displayAbout} displayContent={this.returnAboutContent()} closeCallback={this.closeAbout}/>
      </div>
     );
   }
