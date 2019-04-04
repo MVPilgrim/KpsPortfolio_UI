@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import ReactDOM, {DOMComponent} from 'react-dom'
 import TopBar from './TopBar.js'
 import Button from './Button.js'
-import DDPopup from './DDPopup.js'
+import DDPopupAbout from './DDPopupAbout.js'
 
 export default class DoistDemoPane extends Component {
   constructor(props) {
@@ -12,7 +12,6 @@ export default class DoistDemoPane extends Component {
     this.handleAboutButtonClick      = this.handleAboutButtonClick.bind(this)
     this.handleDirectionsButtonClick = this.handleDirectionsButtonClick.bind(this)
     this.closeAbout                  = this.closeAbout.bind(this)
-    this.returnAboutContent          = this.returnAboutContent.bind(this)
 
     this.state = {
       msgArray : [],
@@ -107,19 +106,7 @@ export default class DoistDemoPane extends Component {
 
   }
 
-  returnAboutContent() {
-    console.log("returnAboutContent() entered.")
-    var retEle = '<div className="DDPopup">'
-    retEle +=  '<h1 style={{"font-size": "4em"}}>DDPopupAbout</h1>'
-    retEle +=  '<p/>'
-    retEle += '</div>'
-
-    console.log("returnAboutContent() retEle: " + retEle)
-    return(retEle)
-  }
-
   render() {
-
     return(
       <div>
         <TopBar className="DoistDemoTopBar"/>
@@ -128,7 +115,7 @@ export default class DoistDemoPane extends Component {
         <Button label="About" style={{"left": "17.5%"}} handleClick={this.handleAboutButtonClick}/>
         <div className="DoistDemoHeading">Doist Demo UI</div>
         <DisplayMsg msgArray={this.state.msgArray}/>
-        <DDPopup displayPopup={this.state.displayAbout} displayContent={this.returnAboutContent()} closeCallback={this.closeAbout}/>
+        <DDPopupAbout displayPopup={this.state.displayAbout} closeCallback={this.closeAbout}/>
      </div>
     );
   }

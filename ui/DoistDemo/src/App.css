@@ -267,8 +267,14 @@ a.Gospel:hover {
 }
 
 .DDPopup {
-  position: absolute;
-  left: 300px;
-  top: 300px;
   z-index: 99;
+  height: 73.5%;
+  width: 34.0%;
+  position: fixed;
+  left: 18.0%;
+  top: 8.5%;
+  background-color: #ffffff;
+  border-style: outset;
+  border-color: #808080;
+  border-width: 5px;
 }
