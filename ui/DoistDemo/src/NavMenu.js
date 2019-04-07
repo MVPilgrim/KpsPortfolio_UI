@@ -23,10 +23,10 @@ export default class NavMenu extends Component {
   displayAbout(event) {
     this.reactDomRender (
       <div>
-        <TopBar className="TopBar"/>
+        <TopBar className="TopBar" displayHeading={true}/>
         <NavMenu/>
         <div className="MainView">
-          <h1 className="PageHeading">About KpsPortfolio</h1>
+          <h1 className="PageHeading">About KPS Portfolio</h1>
           <img className="KpsPhoto" src={require("./Images/KpsButler.png")}/>
           <p className="TextBody">
             Hi! My name is Kevin and I'll be your server today. And I can
@@ -55,10 +55,10 @@ export default class NavMenu extends Component {
   displayGospel(event) {
     this.reactDomRender (
       <div>
-        <TopBar className="TopBar"/>
+        <TopBar className="TopBar" displayHeading={true}/>
         <NavMenu/>
         <div className="MainView" style={{"overflow": "scroll"}}>
-          <h1>The Gospel</h1>
+          <h1 className="PageHeading">The Gospel</h1>
             <p className="TextBody">
               Putting your faith in Jesus Christ is absolutely the most important thing you can do.
               Please take a minute or two to read the Bible verse and the explanatory text that appears when you
@@ -112,7 +112,7 @@ export default class NavMenu extends Component {
   displayDoistDemo(event) {
     this.reactDomRender (
       <div>
-        <TopBar className="TopBar"/>
+        <TopBar className="TopBar" displayHeading={true}/>
         <NavMenu/>
         <DoistDemoMain/>
       </div>,
@@ -123,10 +123,10 @@ export default class NavMenu extends Component {
   displayVirtualSupport(event) {
     this.reactDomRender (
       <div>
-        <TopBar className="TopBar"/>
+        <TopBar className="TopBar" displayHeading={true}/>
         <NavMenu/>
         <div className="MainView">
-          <h1>Virtual Support</h1>
+          <h1 className="PageHeading">Virtual Support</h1>
             <p className="TextBody">
               The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
               The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
@@ -146,10 +146,10 @@ export default class NavMenu extends Component {
   displayWiseEliza(event) {
     this.reactDomRender (
       <div>
-        <TopBar className="TopBar"/>
+        <TopBar className="TopBar" displayHeading={true}/>
         <NavMenu/>
         <div className="MainView">
-          <h1>Wise Eliza</h1>
+          <h1 className="PageHeading">Wise Eliza</h1>
             <p className="TextBody">
               The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
               The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
@@ -169,10 +169,10 @@ export default class NavMenu extends Component {
   displayChildlikeHomepage(event) {
     this.reactDomRender (
       <div>
-        <TopBar className="TopBar"/>
+        <TopBar className="TopBar" displayHeading={true}/>
         <NavMenu/>
         <div className="MainView">
-          <h1>Childlike Homepage</h1>
+          <h1 className="PageHeading">Childlike Homepage</h1>
             <p className="TextBody">
               The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
               The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
@@ -193,19 +193,19 @@ export default class NavMenu extends Component {
     return(
       <div className="NavMenu">
         <div>&nbsp;</div>
-        <div>&nbsp;<i className="far fa-folder">&nbsp;&nbsp;</i><a href="http://kpsportfolio.info">Home</a></div>
+        <div>&nbsp;<i className="far fa-folder" style={{"color": "#ffffff"}}>&nbsp;&nbsp;</i><a href="http://kpsportfolio.info">Home</a></div>
         <div>&nbsp;</div>
-        <div>&nbsp;<i className="far fa-folder">&nbsp;&nbsp;</i><a href="javascript:void(0)" onClick={this.displayAbout}>About</a></div>
+        <div>&nbsp;<i className="far fa-folder" style={{"color": "#ffffff"}}>&nbsp;&nbsp;</i><a href="javascript:void(0)" onClick={this.displayAbout}>About</a></div>
         <div>&nbsp;</div>
-        <div>&nbsp;<i className="far fa-folder">&nbsp;&nbsp;</i><a href="javascript:void(0)" onClick={this.displayGospel}>The&nbsp;Gospel</a></div>
+        <div>&nbsp;<i className="far fa-folder" style={{"color": "#ffffff"}}>&nbsp;&nbsp;</i><a href="javascript:void(0)" onClick={this.displayGospel}>The&nbsp;Gospel</a></div>
         <div>&nbsp;</div>
-        <div>&nbsp;<i className="far fa-folder">&nbsp;&nbsp;</i><a href="javascript:void(0)" onClick={this.displayDoistDemo}>Doist&nbsp;Demo</a></div>
+        <div>&nbsp;<i className="far fa-folder" style={{"color": "#ffffff"}}>&nbsp;&nbsp;</i><a href="javascript:void(0)" onClick={this.displayDoistDemo}>Doist&nbsp;Demo</a></div>
         <div>&nbsp;</div>
-        <div>&nbsp;<i className="far fa-folder">&nbsp;&nbsp;</i><a href="javascript:void(0)" onClick={this.displayVirtualSupport}>Virtual&nbsp;Support</a></div>
+        <div>&nbsp;<i className="far fa-folder" style={{"color": "#ffffff"}}>&nbsp;&nbsp;</i><a href="javascript:void(0)" onClick={this.displayVirtualSupport}>Virtual&nbsp;Support</a></div>
         <div>&nbsp;</div>
-        <div>&nbsp;<i className="far fa-folder">&nbsp;&nbsp;</i><a href="javascript:void(0)" onClick={this.displayWiseEliza}>Wise&nbsp;Eliza</a></div>
+        <div>&nbsp;<i className="far fa-folder" style={{"color": "#ffffff"}}>&nbsp;&nbsp;</i><a href="javascript:void(0)" onClick={this.displayWiseEliza}>Wise&nbsp;Eliza</a></div>
         <div>&nbsp;</div>
-        <div>&nbsp;<i className="far fa-folder">&nbsp;&nbsp;</i><a href="javascript:void(0)" onClick={this.displayChildlikeHomepage}>Childlike&nbsp;Homepage</a></div>
+        <div>&nbsp;<i className="far fa-folder" style={{"color": "#ffffff"}}>&nbsp;&nbsp;</i><a href="javascript:void(0)" onClick={this.displayChildlikeHomepage}>Childlike&nbsp;Homepage</a></div>
      </div>
     );
   }

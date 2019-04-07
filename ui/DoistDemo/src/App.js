@@ -14,7 +14,7 @@ class App extends Component {
 
   render() {
     return <div className="App">
-      <TopBar className="TopBar"/>
+      <TopBar className="TopBar" displayHeading={true}/>
       <NavMenu mainViewRef={this.mainViewRef} />
       <MainView mainViewRef={this.mainViewRef} />
     </div>

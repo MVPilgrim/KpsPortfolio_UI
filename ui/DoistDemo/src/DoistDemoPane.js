@@ -1,8 +1,11 @@
-import React, {Component} from 'react'
+import React, {Component}       from 'react'
 import ReactDOM, {DOMComponent} from 'react-dom'
-import TopBar from './TopBar.js'
-import Button from './Button.js'
-import DDPopupAbout from './DDPopupAbout.js'
+
+import TopBar            from './TopBar.js'
+import Button            from './Button.js'
+import DDPopupAbout      from './DDPopupAbout.js'
+import DDPopupDirections from './DDPopupDirections.js'
+import DDPopupInitDemo   from './DDPopupInitDemo.js'
 
 export default class DoistDemoPane extends Component {
   constructor(props) {
@@ -11,12 +14,18 @@ export default class DoistDemoPane extends Component {
     this.chkForStartMsg              = this.chkForStartMsg.bind(this);
     this.handleAboutButtonClick      = this.handleAboutButtonClick.bind(this)
     this.handleDirectionsButtonClick = this.handleDirectionsButtonClick.bind(this)
+    this.handleClearLogButtonClick = this.handleClearLogButtonClick.bind(this)
     this.closeAbout                  = this.closeAbout.bind(this)
+    this.closeDirections             = this.closeDirections.bind(this)
+    this.closeInitDemo               = this.closeInitDemo.bind(this)
 
     this.state = {
       msgArray : [],
       ws : "",
-      displayAbout : false
+      displayAbout          : false,
+      displayDirections     : false,
+      displayInitDemo       : false,
+      initDemoCommandString : ""
     }
   }
 
@@ -49,18 +58,49 @@ export default class DoistDemoPane extends Component {
       console.log("Before onmessage")
       console.log(e.data)
       var tmpArray = this.state.msgArray
-      var wrks = decodeURIComponent(e.data)
-      wrks = wrks.replace(/[+]/g," ")
-      tmpArray.push(wrks)
-      console.log("wrks decode: " + wrks)
+      //var rawMsg = decodeURIComponent("%E2%9E%95" + e.data)
+      var rawMsg = decodeURIComponent("%E2%9A%AB" + e.data)
+      rawMsg = rawMsg.replace(/[+]/g," ")
+
+      var formattedMsg = this.formatMsg(rawMsg)
+      formattedMsg[0] = formattedMsg[0].replace(/\[/g," ")
+      tmpArray.push(formattedMsg[0])
+      tmpArray.push(formattedMsg[1])
+
       this.setState({msgArray: tmpArray})
-      var rc = this.chkForStartMsg(wrks)
+      var rc = this.chkForStartMsg(rawMsg)
       if (rc) {
         this.invokeLambdaFunction(wsid)
       }
     }
     this.setState({ws: ws})
-    alert('Task: ' + 'cmd="start DoistDemo"' + ' wsid="' + wsid + '"')
+    //alert('Task: ' + 'cmd="start DoistDemo"' + ' wsid="' + wsid + '"')
+    var wcmd = 'cmd="start DoistDemo"' + ' wsid="' + wsid + '"'
+    this.setState({initDemoCommandString: wcmd})
+    this.setState({displayInitDemo: true})
+  }
+
+  formatMsg(msg) {
+    var ind = msg.indexOf(" ")
+    console.log("### ind: " + ind)
+    var timeStamp = msg.slice(0,ind)
+    console.log("### timeStamp: " + timeStamp)
+    msg = msg.slice(ind+1)
+    var cmdAndWsid = msg.match(/content=.*"]/)
+    console.log("cmdAndWsid 1: " + cmdAndWsid)
+    if (cmdAndWsid == null || cmdAndWsid == "") {
+      cmdAndWsid = msg.match(/content=.*",/)
+    }
+    console.log("cmdAndWsid 2: " + cmdAndWsid)
+    cmdAndWsid = cmdAndWsid[0]
+    cmdAndWsid = cmdAndWsid.substring(8,cmdAndWsid.length-1)
+    console.log("### cmdAndWsid: " + cmdAndWsid)
+    var formattedMsg1 = timeStamp + ": " + cmdAndWsid
+    var formattedMsg2 = msg
+    console.log("### formattedMsg1: " + formattedMsg1)
+    console.log("### formattedMsg2: " + formattedMsg2)
+    var formattedMsg = [formattedMsg1,formattedMsg2]
+    return formattedMsg
   }
 
   closeWebsocket() {
@@ -94,7 +134,6 @@ export default class DoistDemoPane extends Component {
   }
 
   handleAboutButtonClick(event) {
-    /* alert("handleAboutButtonClick() entered.") */
     this.setState({displayAbout: true})
   }
   closeAbout(event) {
@@ -102,20 +141,33 @@ export default class DoistDemoPane extends Component {
   }
 
   handleDirectionsButtonClick(event) {
-    alert("handleDirectionsButtonClick() entered.")
+    this.setState({displayDirections: true})
+  }
+  closeDirections(event) {
+    this.setState({displayDirections: false})
+  }
 
+  closeInitDemo(event) {
+    this.setState({displayInitDemo: false})
+  }
+
+  handleClearLogButtonClick(event) {
+    this.setState({msgarray: []})
   }
 
   render() {
     return(
       <div>
-        <TopBar className="DoistDemoTopBar"/>
+        <TopBar className="DoistDemoTopBar displayHeading={true}"/>
         <Button label="Init Demo" style={{"width": "60px"}} handleClick={this.handleInitButtonClick}/>
         <Button label="Directions" style={{"left": "13.5%", "width": "60px"}} handleClick={this.handleDirectionsButtonClick}/>
-        <Button label="About" style={{"left": "17.5%"}} handleClick={this.handleAboutButtonClick}/>
-        <div className="DoistDemoHeading">Doist Demo UI</div>
+        <Button label="Clear Log" style={{"left": "17.5%", "width": "60px"}} handleClick={this.handleClearLogButtonClick}/>
+        <Button label="About" style={{"left": "22.5%"}} handleClick={this.handleAboutButtonClick}/>
+        <div className="DoistDemoHeading">Doist Demo Message Log</div>
         <DisplayMsg msgArray={this.state.msgArray}/>
         <DDPopupAbout displayPopup={this.state.displayAbout} closeCallback={this.closeAbout}/>
+        <DDPopupDirections displayPopup={this.state.displayDirections} closeCallback={this.closeDirections}/>
+        <DDPopupInitDemo displayPopup={this.state.displayInitDemo} closeCallback={this.closeInitDemo} initDemoCommandString={this.state.initDemoCommandString}/>
      </div>
     );
   }
@@ -146,13 +198,25 @@ class DisplayMsg extends Component {
   }
   */
 
+ /*
+              if ((index %2) == 0) {
+                <li key={index}>{item}</li>
+              } else {
+                <p>{item}</p>
+              }
+            {
+              console.log("index,index % 2: " + index + "," + index%2)
+              console.log("item: " + item)
+            }
+ */
+
   render() {
     var retEle = (<p/>)
     if (this.props.msgArray.length > 0) {
       retEle = (
         <ul className="DisplayLog">
           {this.props.msgArray.map((item,index) => 
-            <li key={index}>{item}</li>
+            <div>{item}</div>
           )}
         </ul>
       )

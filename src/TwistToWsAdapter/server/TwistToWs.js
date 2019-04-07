@@ -2,10 +2,11 @@ var http = require('http');
 var qs = require('querystring');
 const websocket = require('ws')
 
-const wss = new websocket.Server({ port: 10001 })
-
 wsconnections = []
 
+// Messages received on the http connection are forwarded
+// to the browser via the websocket connection.
+const wss = new websocket.Server({ port: 10001 })
 wss.on('connection', (ws,req) => {
   log("req.url: " + req.url)
   wsid = req.url.substr(10,req.url.length - 13)
@@ -31,8 +32,8 @@ wss.on('connection', (ws,req) => {
   })
 })
 
-
-
+// Receive messages from the Twist integration
+// and forward them to the browser via the web socket connection.
 http.createServer(function (req, res) {
   let body = '';
   req.on('data', chunk => {

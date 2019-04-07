@@ -20,8 +20,9 @@ export default class DDPopupAbout extends Component {
     if (this.props.displayPopup) {
       retEle = (
         <div className="DDPopup">
+          <i className="far fa-window-close" style={{"float": "right","font-size": "25px","margin": "5px 10px 0 0","color": "#555555"}} onClick={this.closePopup}></i>
           <h1>About Doist Demo</h1>
-          <div>
+          <div className="PopupTextBody">
             <p>
               The Doist Demo illustrates the use of the Doist products Todist and Twist
               along with a number of other technologies.

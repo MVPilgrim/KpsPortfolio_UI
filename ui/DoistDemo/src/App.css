@@ -23,7 +23,8 @@ a:hover, a:active {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #343434;
+  background-color: #303940;
+  background-image: linear-gradient(to right, #607180, #303940, #303940, #607180);
   border: 0;
 }
 
@@ -34,7 +35,8 @@ a:hover, a:active {
   position: fixed;
   top: 6.5%;
   left: 0;
-  background-color: #4d4d4d;
+  background-color: #303940;
+  background-image: linear-gradient(180deg, #303940, #303940, #607180);
   border: 0;
   display: flex;
   align-items: left;
@@ -78,7 +80,7 @@ a:hover, a:active {
 
 .DoistDemoHeading {
   top: 12.0%;
-  left: 25.0%;
+  left: 20.0%;
   position: fixed;
   text-align: center;
   color: #5a5a5a;
@@ -259,11 +261,113 @@ a.Gospel:hover {
 	left: auto;
         right: 100%;
 	#transform: translate(-50%, 0);
-        transform: rotate(-90deg) translate(0, -50%);
-	margin-bottom: 0;
-        top: 50%;
-        margin-right: -5px;
-	margin-top: -5px;
+  transform: rotate(-90deg) translate(0, -50%);
+  margin-bottom: 0;
+  top: 50%;
+  margin-right: -5px;
+  margin-top: -5px;
+}
+.KpsPhoto {
+  height: 216px;
+  width: 228px;
+  position: fixed;
+  top: 9.0%;
+  left: 12.0%;
+}
+
+.GospelHeading {
+  text-align: center;
+  color: #505050;
+  font-family: Arial, Helvetica, serif;
+  font-size: 2em;
+}
+
+.GospelText {
+  text-align: center;
+  color: crimson;
+  font-family: Arial, Helvetica, serif;
+  font-size: 1.5em;
+}
+
+.GospelEpilog {
+  text-align: center;
+  color: black;
+  font-family: "Arial Black", Helvetica, serif;
+  font-size: 2em;
+}
+
+.GospelResources {
+  margin: 0px 350px 0px 350px;
+  text-align: center;
+  color: black;
+  font-family: "Times New Roman", Helvetica, serif;
+  font-size: 1.3em;
+}
+
+a.Gospel:link {
+  color: black;
+}
+a.Gospel:visited {
+  color: black;
+}
+a.Gospel:hover {
+  color: red;
+}
+
+.GospelPrayer {
+  text-align: justify;
+  text-justify: inter-word;
+  color: #4d4d4d;
+  font-family: Arial, Helvetica, serif;
+  font-size: 1.3em;
+  margin: 0px 400px 0px 400px;
+}
+
+[gospel-tooltip]:hover {
+	position: relative;
+}
+[gospel-tooltip]:hover::before {
+	all: initial;
+	font-family: Arial, Helvetica, sans-serif;
+	display: inline-block;
+	border-radius: 5px;
+	padding: 10px;
+	#background-color: #1a1a1a;
+	background-color: #e00000;
+	content: attr(gospel-tooltip);
+	color: #f9f9f9;
+	position: absolute;
+	bottom: auto;
+	width: 150px;
+	left: auto;
+	#transform: translate(-50%, 0);
+	transform: translate(0, -50%);
+	margin-bottom: 0px;
+	text-align: center;
+	font-size: 14px;
+	right: 100%;
+	top: 50%;
+	margin-right: 15px;
+}
+[gospel-tooltip]:hover::after {
+	all: initial;
+	display: inline-block;
+	width: 0; 
+	height: 0; 
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;		  
+	border-top: 10px solid #1a1a1a;
+	position: absolute;
+	bottom: auto;
+	content: '';
+	left: auto;
+        right: 100%;
+	#transform: translate(-50%, 0);
+  transform: rotate(-90deg) translate(0, -50%);
+  margin-bottom: 0;
+  top: 50%;
+  margin-right: -5px;
+  margin-top: -5px;
 }
 
 .DDPopup {
@@ -271,9 +375,29 @@ a.Gospel:hover {
   height: 73.5%;
   width: 34.0%;
   position: fixed;
-  left: 18.0%;
-  top: 8.5%;
+  left: 14.0%;
+  top: 12.0%;
   background-color: #ffffff;
+  border-style: outset;
+  border-color: #808080;
+  border-width: 5px;
+}
+
+.PopupTextBody {
+  text-align: justify;
+  text-justify: inter-word;
+  color: #4d4d4d;
+  font-family: Arial, Helvetica, serif;
+  font-size: 1.3em;
+  margin: 0px 5.0% 0px 5.0%;
+}
+
+.InitDemoField {
+  text-align: left;
+  color: #4d4d4d;
+  font-family: Arial, Helvetica, serif;
+  font-size: 1.0em;
+  margin: 5.0% 5.0% 5.0% 5.0%;
   border-style: outset;
   border-color: #808080;
   border-width: 5px;
