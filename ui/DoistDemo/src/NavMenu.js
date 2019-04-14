@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
 import ReactDom from 'react-dom'
+//import { DefaultPlayer as Video } from 'react-html5video';
+//import 'react-html5video/dist/styles.css';
 
 import TopBar from './TopBar.js'
 import DoistDemoMain from './DoistDemoMain.js'
@@ -13,6 +15,7 @@ export default class NavMenu extends Component {
     this.displayDoistDemo         = this.displayDoistDemo.bind(this);
     this.displayWiseEliza         = this.displayWiseEliza.bind(this);
     this.displayChildlikeHomepage = this.displayChildlikeHomepage.bind(this);
+    this.clhpSun                  = this.clhpSun.bind(this);
 
     this.mainViewRef     = props.mainViewRef;
     this.reactDomRender  = ReactDom.render;
@@ -29,11 +32,37 @@ export default class NavMenu extends Component {
           <h1 className="PageHeading">About KPS Portfolio</h1>
           <img className="KpsPhoto" src={require("./Images/KpsButler.png")}/>
           <p className="TextBody">
-            Hi! My name is Kevin and I'll be your server today. And I can
-            program your computer server as well.
+            Welcome! My name is Kevin and I'll be your server today. May I suggest
+                 many delightful software selections on the menu
+                 serve up software
+                     soupcon 
+                     appetizer
+                     vinagret salad
+                     main course
+                     sauteed mushrooms
+                     succulent corn ...
+                     dessert, apple tarts with whipped cream
+                     
+                     ajax, html, css, reaact, javascript, java,
+                     
+                     servers: web, VM, Linux
+                     services: security, micro, network, OS
+                     
+                     
+                     
+                     
+          </p>
+          <br/>
+          <p>
           </p>
           <br/>
           <p className="TextBody">
+            Valet abilities like Solid Generalist.
+            
+            
+            
+            
+            
             The focus of the portfolio is to present myself as a "Solid Generalist" in software development. I readily admit that I have not attained
             Guru status in a particular software technology. But I do believe that I can demonstrate useful proficiency in a number of technologies
             and an ability to learn new ones pretty quickly. In addition to the software projects contained in KpsPortfolio, there are a number
@@ -61,14 +90,12 @@ export default class NavMenu extends Component {
           <h1 className="PageHeading">The Gospel</h1>
             <p className="TextBody">
               Putting your faith in Jesus Christ is absolutely the most important thing you can do.
-              Please take a minute or two to read the Bible verse and the explanatory text that appears when you
-              hover over each line in the verse.
+              Please take a minute or two and read the Bible verse to find out why. Hover over each line to see explanatory text.
             </p>
             <br/>
             <br/>
-            <span className="GospelHeading">
-              John 3:16<br/>
-            </span>
+            <span style={{"color": "#505050", "font-size": "3.0em", "text-align": "center"}}>John 3:16</span>
+            <br/>
             <div className="GospelText">
               <span gospel-tooltip="God was, is, and will always be. He created all things including you.">For God</span><br/>
               <span gospel-tooltip="His whole creation, all its people and you.">loved the world so much</span><br/>
@@ -82,14 +109,16 @@ export default class NavMenu extends Component {
                 Will you believe?
               </p>
             </div>
+            <span style={{"color": "black", "font-size": "1.5em", "text-align": "center"}}>If you do, tell God, from your heart, something like this:</span><br/>
             <div className="GospelPrayer">
-              If you do, tell God something like this:
-              Lord, I need you. Please come into my life.
-              Thank you for dying on the cross for my sins.
-              I believe you did that and that you rose from the dead.
-              Because you are alive, I can live forever, too, in heaven with you.
-              Please show me what's next.
-              Amen.
+              <div style={{"margin": "0 2% 0 5%"}}>
+                "Lord, I need you. Please come into my life.
+                Thank you for dying on the cross for my sins.
+                I believe you did that and that you rose from the dead.
+                Because you are alive, I can live forever, too, in heaven with you.
+                Please show me what's next."
+                Amen.
+              </div>
             </div>
             <br/>
             <div className="GospelResources">
@@ -125,18 +154,55 @@ export default class NavMenu extends Component {
       <div>
         <TopBar className="TopBar" displayHeading={true}/>
         <NavMenu/>
-        <div className="MainView">
-          <h1 className="PageHeading">Virtual Support</h1>
-            <p className="TextBody">
-              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
-              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
-              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
-              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
-              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
-              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
-              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
-              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
-            </p>
+        <div className="MainView" style={{"overflow": "scroll"}}>
+          <div style={{"content": "", "display": "table", "clear": "both"}}>
+            <h1 className="PageHeading">Virtual Support</h1>
+              <div style={{"float": "left", "width": "50%"}}>
+                <p className="TextBodyColumn">
+                  I made this video a number of years ago as an entry in a contest at a previous company to create innovative ideas for product enhancements.
+                  The product I worked on was called Connect:Direct aka Network DataMover.
+                  Connect:Direct can transfer many types of files on many types of computer systems with application integration capabilities on
+                  both the sending and receiving sides.
+                </p><br/>
+                <p className="TextBodyColumn">
+                  My idea was to create a dedicated virtual support space for each Connect:Direct customer.
+                  Support personnel and customer technicians could collaborate in this virtual space to solve issues the customer encounters with Connect:Direct.
+                  The space contains tools to:
+                  <ul>
+                    <li>View diagnostic information.</li>
+                    <li>Access historical information about previous issues.</li>
+                    <li>Display configuration diagrams of the customer's network and instances of Connect:Direct.</li>
+                    <li>Provision C:D simulators to visualize C:D execution using the events recorded in log files (or Statistics Files as they are called).</li>
+                  </ul>
+                </p>
+                <p className="TextBodyColumn">
+                  I used OpenSource software called OpenSimulator for the virtual environment. It is patterned after the SecondLife virtual world.
+                </p><br/>
+                <p className="TextBodyColumn">
+                  <span style={{"font-size": "20px", "font-weight": "bold", "color": "black"}}>Before watching</span> this video please try and look past the following
+                  issues with the quality of the video. (I might trying remaking the video one day to improve it.) Please focus on the idea itself of using a virtual space to collaborate with
+                  customers to solve support issues.
+                  <ul>
+                    <li>There was a deadline to meet for the contest.</li>
+                    <li>This was my first time to make a video.</li>
+                    <li>And so it was my first time to use video and audio editing tools.</li>
+                    <li>The avatars in OpenSim can't move their lips which distracts from the dialog.</li>
+                    <li>I voiced the dialog myself. I used an audio editing tool to lower the frequency of my voice for one avatar
+                        and to raise it for the other. Unfortunately, the effect seems a little comical.</li>
+                    <li>Messages displayed when the Connect:Direct simulator is running are not readable.</li>
+                    <li>The moving parts that simulate objects and data flow are hard to see.</li>
+                  </ul>
+                </p>
+                <p className="TextBodyColumn">
+                  But undaunted, I present the video to you anyway. What do you think of the idea?
+                </p>
+              </div>
+              <div style={{"float": "left", "width": "50%"}}>
+                <video width="640" height="480" controls>
+                  <source src="http://kpsportfolio.info/VirtualSupport.mp4" type="video/mp4" />
+                </video>
+              </div>
+          </div>
         </div>
       </div>,
       this.targetContainer
@@ -151,14 +217,6 @@ export default class NavMenu extends Component {
         <div className="MainView">
           <h1 className="PageHeading">Wise Eliza</h1>
             <p className="TextBody">
-              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
-              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
-              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
-              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
-              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
-              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
-              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
-              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
             </p>
         </div>
       </div>,
@@ -171,22 +229,35 @@ export default class NavMenu extends Component {
       <div>
         <TopBar className="TopBar" displayHeading={true}/>
         <NavMenu/>
-        <div className="MainView">
-          <h1 className="PageHeading">Childlike Homepage</h1>
-            <p className="TextBody">
-              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
-              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
-              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
-              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
-              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
-              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
-              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
-              The intention is to demonstrate proficiency in a number of software technologies and some idea of me as a person.
-            </p>
+        <div className="MainView" style={{"overflow": "scroll"}}>
+          <div style={{"content": "", "display": "table", "clear": "both"}}>
+            <h1 className="PageHeading">Childlike Homepage</h1>
+            <div style={{"float": "left", "width": "30%"}}>
+              <p className="TextBodyColumn">
+                In the mid-90's when the Web was spinning up,
+                I saw a delightful home page. I don't remember the author or I would certainly give him credit.
+                But I remember the major elements and have tried to reproduce them here.
+              </p>
+            </div>
+            <div style={{"float": "left", "width": "70%"}}>
+              <img src={require("./Images/ChildlikeHomepage.png")} width="720px" height="480px" style={{"border-style": "solid", "border-width": "1px", "border-color": "dark gray"}} usemap="#clhpmap"/>
+              <div>
+                <map name="clhpmap">
+                  <area shape="rect" coords="0,0,215,160" href="javascript:void(0)" alt="Sun" onClick={this.clhpSun}/>
+                  <area shape="rect" coords="550,75,700,300" href="https://www.google.com" alt="House"/>
+                  <area shape="rect" coords="550,400,700,430" href="https://www.google.com" alt="Signature"/>
+                </map>
+              </div>
+            </div>
+          </div>
         </div>
       </div>,
       this.targetContainer
     );
+  }
+
+  clhpSun(event) {
+    alert("Sun clicked.");
   }
 
   render() {

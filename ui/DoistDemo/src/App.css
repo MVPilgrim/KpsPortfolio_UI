@@ -165,6 +165,15 @@ h1 {
   margin: 0px 350px 0px 350px;
 }
 
+.TextBodyColumn {
+  text-align: justify;
+  text-justify: inter-word;
+  color: #4d4d4d;
+  font-family: Arial, Helvetica, serif;
+  font-size: 1.3em;
+  margin: 0 0 0 10px;
+}
+
 .KpsPhoto {
   height: 216px;
   width: 228px;
@@ -177,7 +186,7 @@ h1 {
   text-align: center;
   color: #505050;
   font-family: Arial, Helvetica, serif;
-  font-size: 2em;
+  font-size: 3em;
 }
 
 .GospelText {
@@ -203,10 +212,10 @@ h1 {
 }
 
 a.Gospel:link {
-  color: black;
+  color: "DarkRed";
 }
 a.Gospel:visited {
-  color: black;
+  color: "DarkRed";
 }
 a.Gospel:hover {
   color: red;
@@ -305,13 +314,16 @@ a.Gospel:hover {
 }
 
 a.Gospel:link {
-  color: black;
+  color: SeaGreen;
+  font-weight: bold;
 }
 a.Gospel:visited {
-  color: black;
+  color: SeaGreen;
+  font-weight: bold;
 }
 a.Gospel:hover {
   color: red;
+  font-weight: bold;
 }
 
 .GospelPrayer {

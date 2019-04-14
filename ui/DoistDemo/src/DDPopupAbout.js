@@ -4,7 +4,6 @@ import ReactDOM, {DOMComponent} from 'react-dom'
 export default class DDPopupAbout extends Component {
   constructor(props) {
     super(props)
-    console.log("DDPopup entered.")
     this.closePopup = this.closePopup.bind(this)
   }
 

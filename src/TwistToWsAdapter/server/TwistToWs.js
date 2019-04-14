@@ -8,8 +8,12 @@ wsconnections = []
 // to the browser via the websocket connection.
 const wss = new websocket.Server({ port: 10001 })
 wss.on('connection', (ws,req) => {
+  log("WS Connection start.")
   log("req.url: " + req.url)
-  wsid = req.url.substr(10,req.url.length - 13)
+  var url = decodeURIComponent(req.url)
+  log("url decoded: " + url)
+  wsid = url.replace(/"/g,'')
+  wsid = wsid.substr(7)
   log("wsid=" + wsid)
   wsconn = new Object()
   wsconn.wsid = wsid

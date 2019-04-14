@@ -9,7 +9,7 @@ export default class MainView extends Component {
   render() {
     return(
       <div className="MainView" ref={this.mainViewRef}>
-        <img src={require("./Images/KpsPortfolio.svg")} height={"100%"} width={"100%"}/>
+        <img src={require("./Images/BlackPortfolio.png")} height="100.0%" width="100.0%" align="middle" style={{"position": "fixed"},{"top": "400px"}}/>
      </div>
     );
   }

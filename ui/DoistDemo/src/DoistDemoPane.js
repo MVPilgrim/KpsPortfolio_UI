@@ -4,8 +4,9 @@ import ReactDOM, {DOMComponent} from 'react-dom'
 import TopBar            from './TopBar.js'
 import Button            from './Button.js'
 import DDPopupAbout      from './DDPopupAbout.js'
-import DDPopupDirections from './DDPopupDirections.js'
 import DDPopupInitDemo   from './DDPopupInitDemo.js'
+import DDPopupDirections from './DDPopupDirections.js'
+import DDPopupDevStatus  from './DDPopupDevStatus.js'
 
 export default class DoistDemoPane extends Component {
   constructor(props) {
@@ -14,10 +15,12 @@ export default class DoistDemoPane extends Component {
     this.chkForStartMsg              = this.chkForStartMsg.bind(this);
     this.handleAboutButtonClick      = this.handleAboutButtonClick.bind(this)
     this.handleDirectionsButtonClick = this.handleDirectionsButtonClick.bind(this)
-    this.handleClearLogButtonClick = this.handleClearLogButtonClick.bind(this)
+    this.handleClearLogButtonClick   = this.handleClearLogButtonClick.bind(this)
+    this.handleDevStatusButtonClick  = this.handleDevStatusButtonClick.bind(this)
     this.closeAbout                  = this.closeAbout.bind(this)
     this.closeDirections             = this.closeDirections.bind(this)
     this.closeInitDemo               = this.closeInitDemo.bind(this)
+    this.closeDevStatus              = this.closeDevStatus.bind(this)
 
     this.state = {
       msgArray : [],
@@ -152,7 +155,14 @@ export default class DoistDemoPane extends Component {
   }
 
   handleClearLogButtonClick(event) {
-    this.setState({msgarray: []})
+    this.setState({msgArray: []})
+  }
+
+  handleDevStatusButtonClick(event) {
+    this.setState({displayDevStatus: true})
+  }
+  closeDevStatus(event) {
+    this.setState({displayDevStatus: false})
   }
 
   render() {
@@ -162,12 +172,14 @@ export default class DoistDemoPane extends Component {
         <Button label="Init Demo" style={{"width": "60px"}} handleClick={this.handleInitButtonClick}/>
         <Button label="Directions" style={{"left": "13.5%", "width": "60px"}} handleClick={this.handleDirectionsButtonClick}/>
         <Button label="Clear Log" style={{"left": "17.5%", "width": "60px"}} handleClick={this.handleClearLogButtonClick}/>
-        <Button label="About" style={{"left": "22.5%"}} handleClick={this.handleAboutButtonClick}/>
+        <Button label="About" style={{"left": "21.5%"}} handleClick={this.handleAboutButtonClick}/>
+        <Button label="Dev Status" style={{"left": "24.0%", "width": "70px"}} handleClick={this.handleDevStatusButtonClick}/>
         <div className="DoistDemoHeading">Doist Demo Message Log</div>
         <DisplayMsg msgArray={this.state.msgArray}/>
         <DDPopupAbout displayPopup={this.state.displayAbout} closeCallback={this.closeAbout}/>
-        <DDPopupDirections displayPopup={this.state.displayDirections} closeCallback={this.closeDirections}/>
         <DDPopupInitDemo displayPopup={this.state.displayInitDemo} closeCallback={this.closeInitDemo} initDemoCommandString={this.state.initDemoCommandString}/>
+        <DDPopupDirections displayPopup={this.state.displayDirections} closeCallback={this.closeDirections}/>
+        <DDPopupDevStatus displayPopup={this.state.displayDevStatus} closeCallback={this.closeDevStatus}/>
      </div>
     );
   }
