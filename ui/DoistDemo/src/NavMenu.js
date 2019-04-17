@@ -5,6 +5,9 @@ import ReactDom from 'react-dom'
 
 import TopBar from './TopBar.js'
 import DoistDemoMain from './DoistDemoMain.js'
+import DDPopupClhp from './DDPopupClhp.js'
+
+var dummyForceUpdate = 0;
 
 export default class NavMenu extends Component {
   constructor(props) {
@@ -15,12 +18,21 @@ export default class NavMenu extends Component {
     this.displayDoistDemo         = this.displayDoistDemo.bind(this);
     this.displayWiseEliza         = this.displayWiseEliza.bind(this);
     this.displayChildlikeHomepage = this.displayChildlikeHomepage.bind(this);
-    this.clhpSun                  = this.clhpSun.bind(this);
+    this.mouseOver                = this.mouseOver.bind(this);
+    this.mouseOut                 = this.mouseOut.bind(this);
 
     this.mainViewRef     = props.mainViewRef;
     this.reactDomRender  = ReactDom.render;
     this.reactDomRender  = this.reactDomRender.bind(this);
     this.targetContainer = document.getElementById('app');
+
+    this.state = {
+      displayClhpSun        : false,
+      displayClhpClouds     : false,
+      displayClhpHouse      : false,
+      displayClhpFlowers    : false,
+      displayClhpGrass      : false
+    }
   }
 
   displayAbout(event) {
@@ -32,52 +44,50 @@ export default class NavMenu extends Component {
           <h1 className="PageHeading">About KPS Portfolio</h1>
           <img className="KpsPhoto" src={require("./Images/KpsButler.png")}/>
           <p className="TextBody">
-            Welcome! My name is Kevin and I'll be your server today. May I suggest
-                 many delightful software selections on the menu
-                 serve up software
-                     soupcon 
-                     appetizer
-                     vinagret salad
-                     main course
-                     sauteed mushrooms
-                     succulent corn ...
-                     dessert, apple tarts with whipped cream
-                     
-                     ajax, html, css, reaact, javascript, java,
-                     
-                     servers: web, VM, Linux
-                     services: security, micro, network, OS
-                     
-                     
-                     
-                     
-          </p>
-          <br/>
-          <p>
-          </p>
-          <br/>
+            Hello!  My name is Kevin and I'll be your server today.
+            I'll be serving up various items from my portfolio which demonstrate technical
+            proficiency in software development and related technologies. Other items provide
+            an idea of the kind of person I am.
+          </p><br/>
           <p className="TextBody">
-            Valet abilities like Solid Generalist.
-            
-            
-            
-            
-            
-            The focus of the portfolio is to present myself as a "Solid Generalist" in software development. I readily admit that I have not attained
-            Guru status in a particular software technology. But I do believe that I can demonstrate useful proficiency in a number of technologies
-            and an ability to learn new ones pretty quickly. In addition to the software projects contained in KpsPortfolio, there are a number
-            of "artifacts" that I hope you find interesting. Through them, I want to give you an idea of the type of person I am.
+            Let me give you an overview of the menu to help you choose.
+            <ul>
+              <li>The Gospel of Jesus Christ is by far the most important selection here.</li>
+              <li>Doist Demo uses APIs from the Todoist and Twist products to send a short message that is transferred through a number of components
+                  implemented in different ways until the message makes it's way back to the browser and is logged in a web page. 
+                  Amazon Web Services provide the infrastructure for the demo as well as the web site as a whole.
+              </li>
+              <li>The Virtual Support menu item describes an idea for supporting software product customers in a virtual space.</li>
+              <li>Wise Eliza is only an idea. What if software products could be imbued not only with some level of intelligence but with wisdom as well?</li>
+              <li>The Childlike Homepage item is a rendering from memory of a delightful homepage I saw many years ago.</li>
+            </ul>
           </p>
-          <br/>
           <p className="TextBody">
-            I hope you enjoy my work.
+            Additional notes:
+            <ul>
+              <li>All the source code for Doist Demo as well as the entire web site is in Github.</li>
+              <li>The KPS Portfolio web site is written in reactjs and JSX.</li>
+              <li>Some other demos I have in mind:</li>
+                <ul>
+                  <li>Build the Doist Demo components using DevOps tools and techniques (Jenkins, for example).</li>
+                  <li>Create Wise Eliza.</li>
+                  <li>Scan log files using machine learning techniques to help with problem diagnosis.</li>
+                  <li>Write Java code to demonstrate the newest capabilites in the language/platform.</li>
+                  <li>Demonstrate use cases for IBM's Watson.</li>
+                </ul>
+            </ul>
+          </p><br/>
+          <p className="TextBody">
+            By the way, when you're ready for that "spot of Java", please let me know.
           </p>
           <p>
-            <span style={{"font-family": "Trattatello, fantasy","font-size": "1em","float": "left","margin-left": "350px"}}>Kevin P. Stephenson</span>
+            <span style={{"font-family": "Trattatello, fantasy","font-size": "2em","float": "left","margin-left": "350px"}}>
+              Kevin P. Stephenson
+            </span>
           </p>
         </div>
-      </div>,
-      this.targetContainer
+      </div>
+      ,this.targetContainer
     );
   }
 
@@ -240,12 +250,16 @@ export default class NavMenu extends Component {
               </p>
             </div>
             <div style={{"float": "left", "width": "70%"}}>
+              { this.state.displayClhp && <DDPopupClhp/> }
               <img src={require("./Images/ChildlikeHomepage.png")} width="720px" height="480px" style={{"border-style": "solid", "border-width": "1px", "border-color": "dark gray"}} usemap="#clhpmap"/>
               <div>
                 <map name="clhpmap">
-                  <area shape="rect" coords="0,0,215,160" href="javascript:void(0)" alt="Sun" onClick={this.clhpSun}/>
-                  <area shape="rect" coords="550,75,700,300" href="https://www.google.com" alt="House"/>
-                  <area shape="rect" coords="550,400,700,430" href="https://www.google.com" alt="Signature"/>
+                  <span clhp-tooltip="Children's pictures always need a sun.."><area shape="rect" coords="0,0,215,160" href="javascript:void(0)" alt="Sun"/></span>
+                  <span clhp-tooltip="Clouds go with the sun."><area shape="rect" coords="250,25,525,215" href="https://www.google.com" alt="House"/></span>
+                  <span clhp-tooltip="A home for the homepage."><area shape="rect" coords="550,75,700,300" href="https://www.google.com" alt="House"/></span>
+                  <span clhp-tooltip="Flowers are a must-have, too."><area shape="rect" coords="450,250,550,300" href="https://www.google.com" alt="House"/></span>
+                  <span clhp-tooltip="Age 24 is good age."><area shape="rect" coords="550,375,700,430" href="https://www.google.com" alt="Signature"/></span>
+                  <span clhp-tooltip="Lots of good, green grass."><area shape="rect" coords="250,325,500,455" href="https://www.google.com" alt="Signature"/></span>
                 </map>
               </div>
             </div>
@@ -256,9 +270,27 @@ export default class NavMenu extends Component {
     );
   }
 
-  clhpSun(event) {
-    alert("Sun clicked.");
+                  //<area shape="rect" coords="0,0,215,160" href="javascript:void(0)" alt="Sun" onMouseOver={this.mouseOver} onMouseOut={this.mouseOut}/>
+              //{ this.state.displayClhpSun && <DDPopupClhp/> }
+  mouseOver() {
+    console.log("mouseOver entered.");
+    this.setState({displayClhpSun: true});
+    console.log("mouseOver: displayClhpSun: " + this.state.displayClhpSun);
+    this.state.displayClhpSun = true;
+    console.log("mouseOver: displayClhpSun: " + this.state.displayClhpSun);
+    dummyForceUpdate++;
+    this.forceUpdate();
+    this.displayChildlikeHomepage;
   }
+
+  mouseOut() {
+    console.log("mouseOut entered.");
+    this.setState({displayClhpSun: false});
+    console.log("mouseOut: displayClhpSun: " + this.state.displayClhpSun);
+    this.state.displayClhpSun = false;
+    console.log("mouseOut: displayClhpSun: " + this.state.displayClhpSun);
+  }
+                  //<area shape="rect" coords="0,0,215,160" href="javascript:void(0)" alt="Sun" onMouseOver={this.setState({displayClhpSun: true})} onMouseOut={this.setState({displayClhpSun: false})}/>
 
   render() {
     return(
