@@ -192,35 +192,6 @@ class DisplayMsg extends Component {
     /* this.scrollToBottom = this.scrollToBottom.bind(this); */
   }
 
-  /*
-  componentDidUpdate () {
-    console.log("DoistDemoPane.componentDidUpdate() entered.")
-    this.scrollToBottom()
-  }
-  */
-
-  /* Haven't found a good solution yet.
-  scrollToBottom = () => {
-    console.log("DoistDemoPane.scrollToBottom() entered.")
-
-    const logContainer = ReactDOM.findDOMNode(this.logContainer);
-    logContainer.scrollTop = logContainer.scrollHeight;
-
-    console.log("DoistDemoPane.scrollToBottom() exited. logContainer.scrollTop= " + logContainer.scrollTop)
-  }
-  */
-
- /*
-              if ((index %2) == 0) {
-                <li key={index}>{item}</li>
-              } else {
-                <p>{item}</p>
-              }
-            {
-              console.log("index,index % 2: " + index + "," + index%2)
-              console.log("item: " + item)
-            }
- */
 
   render() {
     var retEle = (<p/>)

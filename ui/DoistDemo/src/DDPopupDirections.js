@@ -25,13 +25,20 @@ export default class DDPopupDirections extends Component {
               Here are the steps to run the Doist Demo.
             </p>
             <ul>
-              <li>In the Todoist frame, open the "RunDoistDemo" project.</li>
-              <li>In Twist, click the "DoistDemo" channel and "KpsPortfolio" thread to display messages.</li>
-              <li>Click Init Demo.</li>
-              <li>Copy the text from the popup.</li>
-              <li>Add a task with the copied text from the popup.</li>
-              <li>Watch the messages appear in Twist.</li>
-              <li>Watch the messages appear in the message log.</li>
+              <li>In a separate browser window, log in to Todoist.com and then Twist.com using these credentials if you have not logged in already:</li>
+                <ul>
+                  <li>Id: kpsportfolio1@gmail.com</li>
+                  <li>Password: DoistDemo</li>
+                </ul>
+              <li>In the Twist pane, click the "DoistDemo" channel to display messages.</li>
+              <li>In the Todoist pane, click the three-line menu icon at the top left.</li>
+              <li>Click the "RunDoistDemo" project.</li>
+              <li>In the Doist Demo pane, click Init Demo.</li>
+              <li>Copy the text in the text box of the popup to the clipboard.</li>
+              <li>Click the "X" at the top right corner to close the popup.</li>
+              <li>In the Todoist pane, add a task with the copied text from the popup.</li>
+              <li>Watch the messages appear in the Twist display.</li>
+              <li>Watch the messages appear in the message log in the Doist Demo pane.</li>
             </ul>
           </div>
         </div>

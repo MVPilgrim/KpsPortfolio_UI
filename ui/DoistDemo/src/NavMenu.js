@@ -5,7 +5,6 @@ import ReactDom from 'react-dom'
 
 import TopBar from './TopBar.js'
 import DoistDemoMain from './DoistDemoMain.js'
-import DDPopupClhp from './DDPopupClhp.js'
 
 var dummyForceUpdate = 0;
 
@@ -16,10 +15,7 @@ export default class NavMenu extends Component {
     this.displayGospel            = this.displayGospel.bind(this);
     this.displayVirtualSupport    = this.displayVirtualSupport.bind(this);
     this.displayDoistDemo         = this.displayDoistDemo.bind(this);
-    this.displayWiseEliza         = this.displayWiseEliza.bind(this);
     this.displayChildlikeHomepage = this.displayChildlikeHomepage.bind(this);
-    this.mouseOver                = this.mouseOver.bind(this);
-    this.mouseOut                 = this.mouseOut.bind(this);
 
     this.mainViewRef     = props.mainViewRef;
     this.reactDomRender  = ReactDom.render;
@@ -58,7 +54,6 @@ export default class NavMenu extends Component {
                   Amazon Web Services provide the infrastructure for the demo as well as the web site as a whole.
               </li>
               <li>The Virtual Support menu item describes an idea for supporting software product customers in a virtual space.</li>
-              <li>Wise Eliza is only an idea. What if software products could be imbued not only with some level of intelligence but with wisdom as well?</li>
               <li>The Childlike Homepage item is a rendering from memory of a delightful homepage I saw many years ago.</li>
             </ul>
           </p>
@@ -70,7 +65,6 @@ export default class NavMenu extends Component {
               <li>Some other demos I have in mind:</li>
                 <ul>
                   <li>Build the Doist Demo components using DevOps tools and techniques (Jenkins, for example).</li>
-                  <li>Create Wise Eliza.</li>
                   <li>Scan log files using machine learning techniques to help with problem diagnosis.</li>
                   <li>Write Java code to demonstrate the newest capabilites in the language/platform.</li>
                   <li>Demonstrate use cases for IBM's Watson.</li>
@@ -219,21 +213,6 @@ export default class NavMenu extends Component {
     );
   }
 
-  displayWiseEliza(event) {
-    this.reactDomRender (
-      <div>
-        <TopBar className="TopBar" displayHeading={true}/>
-        <NavMenu/>
-        <div className="MainView">
-          <h1 className="PageHeading">Wise Eliza</h1>
-            <p className="TextBody">
-            </p>
-        </div>
-      </div>,
-      this.targetContainer
-    );
-  }
-
   displayChildlikeHomepage(event) {
     this.reactDomRender (
       <div>
@@ -250,8 +229,7 @@ export default class NavMenu extends Component {
               </p>
             </div>
             <div style={{"float": "left", "width": "70%"}}>
-              { this.state.displayClhp && <DDPopupClhp/> }
-              <img src={require("./Images/ChildlikeHomepage.png")} width="720px" height="480px" style={{"border-style": "solid", "border-width": "1px", "border-color": "dark gray"}} usemap="#clhpmap"/>
+              <img src={require("./Images/ChildlikeHomepage.png")} width="720px" height="480px" style={{"border-style": "solid", "border-width": "3px", "border-color": "dark gray"}} usemap="#clhpmap"/>
               <div>
                 <map name="clhpmap">
                   <span clhp-tooltip="Children's pictures always need a sun.."><area shape="rect" coords="0,0,215,160" href="javascript:void(0)" alt="Sun"/></span>
@@ -270,28 +248,6 @@ export default class NavMenu extends Component {
     );
   }
 
-                  //<area shape="rect" coords="0,0,215,160" href="javascript:void(0)" alt="Sun" onMouseOver={this.mouseOver} onMouseOut={this.mouseOut}/>
-              //{ this.state.displayClhpSun && <DDPopupClhp/> }
-  mouseOver() {
-    console.log("mouseOver entered.");
-    this.setState({displayClhpSun: true});
-    console.log("mouseOver: displayClhpSun: " + this.state.displayClhpSun);
-    this.state.displayClhpSun = true;
-    console.log("mouseOver: displayClhpSun: " + this.state.displayClhpSun);
-    dummyForceUpdate++;
-    this.forceUpdate();
-    this.displayChildlikeHomepage;
-  }
-
-  mouseOut() {
-    console.log("mouseOut entered.");
-    this.setState({displayClhpSun: false});
-    console.log("mouseOut: displayClhpSun: " + this.state.displayClhpSun);
-    this.state.displayClhpSun = false;
-    console.log("mouseOut: displayClhpSun: " + this.state.displayClhpSun);
-  }
-                  //<area shape="rect" coords="0,0,215,160" href="javascript:void(0)" alt="Sun" onMouseOver={this.setState({displayClhpSun: true})} onMouseOut={this.setState({displayClhpSun: false})}/>
-
   render() {
     return(
       <div className="NavMenu">
@@ -305,8 +261,6 @@ export default class NavMenu extends Component {
         <div>&nbsp;<i className="far fa-folder" style={{"color": "#ffffff"}}>&nbsp;&nbsp;</i><a href="javascript:void(0)" onClick={this.displayDoistDemo}>Doist&nbsp;Demo</a></div>
         <div>&nbsp;</div>
         <div>&nbsp;<i className="far fa-folder" style={{"color": "#ffffff"}}>&nbsp;&nbsp;</i><a href="javascript:void(0)" onClick={this.displayVirtualSupport}>Virtual&nbsp;Support</a></div>
-        <div>&nbsp;</div>
-        <div>&nbsp;<i className="far fa-folder" style={{"color": "#ffffff"}}>&nbsp;&nbsp;</i><a href="javascript:void(0)" onClick={this.displayWiseEliza}>Wise&nbsp;Eliza</a></div>
         <div>&nbsp;</div>
         <div>&nbsp;<i className="far fa-folder" style={{"color": "#ffffff"}}>&nbsp;&nbsp;</i><a href="javascript:void(0)" onClick={this.displayChildlikeHomepage}>Childlike&nbsp;Homepage</a></div>
      </div>
