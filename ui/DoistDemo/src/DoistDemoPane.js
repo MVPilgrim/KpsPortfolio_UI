@@ -129,6 +129,7 @@ export default class DoistDemoPane extends Component {
     xhttp.onreadystatechange = function() {
       console.log("invokeLambdaFunction().onreadystatechange() entered. readyState,status,responseText: " + this.readyState + "," + this.status + "," + this.responseText)
     }
+    //xhttp.open("POST", "https://api.kpsportfolio.info/lambda/trigger", true);
     xhttp.open("POST", "http://kpsportfolio.info/lambda/trigger", true);
     xhttp.setRequestHeader("Content-type", "application/json");
     var ws = "{\"cmd\": \"invoke services\", \"wsid\": \"" + wsid + "\"}";

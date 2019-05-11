@@ -203,7 +203,7 @@ export default class NavMenu extends Component {
               </div>
               <div style={{"float": "left", "width": "50%"}}>
                 <video width="640" height="480" controls>
-                  <source src="http://kpsportfolio.info/VirtualSupport.mp4" type="video/mp4" />
+                  <source src="VirtualSupport.mp4" type="video/mp4" />
                 </video>
               </div>
           </div>
@@ -252,7 +252,7 @@ export default class NavMenu extends Component {
     return(
       <div className="NavMenu">
         <div>&nbsp;</div>
-        <div>&nbsp;<i className="far fa-folder" style={{"color": "#ffffff"}}>&nbsp;&nbsp;</i><a href="http://kpsportfolio.info">Home</a></div>
+        <div>&nbsp;<i className="far fa-folder" style={{"color": "#ffffff"}}>&nbsp;&nbsp;</i><a href="https://agw.kpsportfolio.info/main/index.html">Home</a></div>
         <div>&nbsp;</div>
         <div>&nbsp;<i className="far fa-folder" style={{"color": "#ffffff"}}>&nbsp;&nbsp;</i><a href="javascript:void(0)" onClick={this.displayAbout}>About</a></div>
         <div>&nbsp;</div>
