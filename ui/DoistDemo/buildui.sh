@@ -1,6 +1,8 @@
 #!/bin/bash
 
+clear
+
 npm run-script build
 
-sudo rm -f /usr/share/nginx/html/main/app* /usr/share/nginx/html/main/index.html /usr/share/nginx/html/main/runtime* /usr/share/nginx/html/main/vend*
-sudo cp -r dist/* /usr/share/nginx/html/main
+sudo rm -f /usr/share/nginx/html/app* /usr/share/nginx/html/index.html /usr/share/nginx/html/runtime* /usr/share/nginx/html/vend*
+sudo cp -r dist/* /usr/share/nginx/html

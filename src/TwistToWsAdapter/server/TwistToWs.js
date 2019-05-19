@@ -1,12 +1,23 @@
 var http = require('http');
+var https = require('https');
 var qs = require('querystring');
 const websocket = require('ws')
+var fs = require('fs');
 
 wsconnections = []
 
+var privateKey  = fs.readFileSync('/home/ec2-user/KpsPortfolio/KpsPortfolio_DoistDemo/src/TwistToWsAdapter/server/kpsportfolio.info.key', 'utf8');
+var certificate = fs.readFileSync('/home/ec2-user/KpsPortfolio/KpsPortfolio_DoistDemo/src/TwistToWsAdapter/server/kpsportfolio_info.crt', 'utf8');
+var credentials = { key: privateKey, cert: certificate };
+
 // Messages received on the http connection are forwarded
 // to the browser via the websocket connection.
-const wss = new websocket.Server({ port: 10001 })
+var httpsServer = https.createServer(credentials);
+httpsServer.listen(10001);
+const wss = new websocket.Server({
+  server: httpsServer
+});
+
 wss.on('connection', (ws,req) => {
   log("WS Connection start.")
   log("req.url: " + req.url)
@@ -63,8 +74,6 @@ http.createServer(function (req, res) {
     res.write('' ); 
     res.end(resEndCode);
   });
-
-  
 }).listen(10000,"0.0.0.0");
 
 function findConn(body) {

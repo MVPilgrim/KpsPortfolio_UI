@@ -36,7 +36,7 @@ export default class NavMenu extends Component {
       <div>
         <TopBar className="TopBar" displayHeading={true}/>
         <NavMenu/>
-        <div className="MainView">
+        <div className="MainView" style={{"overflow": "scroll"}}>
           <h1 className="PageHeading">About KPS Portfolio</h1>
           <img className="KpsPhoto" src={require("./Images/KpsButler.png")}/>
           <p className="TextBody">
@@ -130,9 +130,9 @@ export default class NavMenu extends Component {
                  Here are links to various resources to learn more about God, Jesus Christ,
                  and the Bible.
                 <ul style={{"margin-top": "-2px"}}>
-                  <li><a class="Gospel" href="http://www.gotquestions.org">gotquestions.org: </a>Hundreds of thousands questions answered about God, Jesus Christ, and the Bible.</li>
-                  <li><a class="Gospel" href="https://www.gotquestions.org/what-is-the-Bible.html">gotquestions.org: </a> What is the Bible?</li>
-                  <li><a class="Gospel" href="https://www.biblegateway.com">biblegateway.com: </a>Many Bible translations.</li>
+                  <li><a class="Gospel" href="javascript:window.open('http://www.gotquestions.org','jav','width=1200,height=800,resizable=yes')">gotquestions.org: </a>Hundreds of thousands questions answered about God, Jesus Christ, and the Bible.</li>
+                  <li><a class="Gospel" href="javascript:window.open('https://www.gotquestions.org/what-is-the-Bible.html','jav','width=1200,height=800,resizable=yes')">gotquestions.org: </a>What is the Bible?</li>
+                  <li><a class="Gospel" href="javascript:window.open('https://www.biblegateway.com','jav','width=1200,height=800,resizable=yes')">biblegateway.com: </a>Many Bible translations.</li>
                 </ul>
               </div>
             </div>
@@ -232,11 +232,11 @@ export default class NavMenu extends Component {
               <img src={require("./Images/ChildlikeHomepage.png")} width="720px" height="480px" style={{"border-style": "solid", "border-width": "3px", "border-color": "dark gray"}} usemap="#clhpmap"/>
               <div>
                 <map name="clhpmap">
-                  <span clhp-tooltip="Children's pictures always need a sun.."><area shape="rect" coords="0,0,215,160" href="javascript:void(0)" alt="Sun"/></span>
-                  <span clhp-tooltip="Clouds go with the sun."><area shape="rect" coords="250,25,525,215" href="https://www.google.com" alt="House"/></span>
+                  <span clhp-tooltip="Children's pictures always need a sun."><area shape="rect" coords="0,0,215,160" href="javascript:void(0)" alt="Sun"/></span>
+                  <span clhp-tooltip="And clouds go with the sun."><area shape="rect" coords="250,25,525,215" href="https://www.google.com" alt="House"/></span>
                   <span clhp-tooltip="A home for the homepage."><area shape="rect" coords="550,75,700,300" href="https://www.google.com" alt="House"/></span>
-                  <span clhp-tooltip="Flowers are a must-have, too."><area shape="rect" coords="450,250,550,300" href="https://www.google.com" alt="House"/></span>
-                  <span clhp-tooltip="Age 24 is good age."><area shape="rect" coords="550,375,700,430" href="https://www.google.com" alt="Signature"/></span>
+                  <span clhp-tooltip="Must have flowers."><area shape="rect" coords="450,250,550,300" href="https://www.google.com" alt="House"/></span>
+                  <span clhp-tooltip="24 is good age."><area shape="rect" coords="550,375,700,430" href="https://www.google.com" alt="Signature"/></span>
                   <span clhp-tooltip="Lots of good, green grass."><area shape="rect" coords="250,325,500,455" href="https://www.google.com" alt="Signature"/></span>
                 </map>
               </div>
@@ -252,7 +252,7 @@ export default class NavMenu extends Component {
     return(
       <div className="NavMenu">
         <div>&nbsp;</div>
-        <div>&nbsp;<i className="far fa-folder" style={{"color": "#ffffff"}}>&nbsp;&nbsp;</i><a href="https://agw.kpsportfolio.info/main/index.html">Home</a></div>
+        <div>&nbsp;<i className="far fa-folder" style={{"color": "#ffffff"}}>&nbsp;&nbsp;</i><a href="index.html">Home</a></div>
         <div>&nbsp;</div>
         <div>&nbsp;<i className="far fa-folder" style={{"color": "#ffffff"}}>&nbsp;&nbsp;</i><a href="javascript:void(0)" onClick={this.displayAbout}>About</a></div>
         <div>&nbsp;</div>
