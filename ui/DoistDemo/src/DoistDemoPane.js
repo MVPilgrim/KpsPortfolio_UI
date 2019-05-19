@@ -38,7 +38,8 @@ export default class DoistDemoPane extends Component {
     wsid = result[1]
     console.log('Start Doist Demo wsid="' + wsid + '"')
 
-    const url = 'ws://52.86.107.14:10001?wsid="' + wsid + '"'
+    //const url = 'wss://52.86.107.14:10001?wsid="' + wsid + '"'
+    const url = 'wss://kpsportfolio.info:10001?wsid="' + wsid + '"'
     console.log("Before new WebSocket")
     //const ws = new WebSocket(url)
     var ws = new WebSocket(url)
@@ -130,7 +131,7 @@ export default class DoistDemoPane extends Component {
       console.log("invokeLambdaFunction().onreadystatechange() entered. readyState,status,responseText: " + this.readyState + "," + this.status + "," + this.responseText)
     }
     //xhttp.open("POST", "https://api.kpsportfolio.info/lambda/trigger", true);
-    xhttp.open("POST", "http://kpsportfolio.info/lambda/trigger", true);
+    xhttp.open("POST", "https://kpsportfolio.info/lambda/trigger", true);
     xhttp.setRequestHeader("Content-type", "application/json");
     var ws = "{\"cmd\": \"invoke services\", \"wsid\": \"" + wsid + "\"}";
     console.log("xhttp.send() ws: " + ws)
