@@ -2,7 +2,7 @@ import './App.css'
 import TopBar from './TopBar.js'
 import NavMenu from './NavMenu.js'
 import MainView from './MainView.js'
-import DoistDemoMain from './DoistDemoMain.js'
+//import DoistDemoMain from './DoistDemoMain.js'
 
 import React, {Component} from 'react'
 
