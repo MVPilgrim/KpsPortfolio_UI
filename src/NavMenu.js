@@ -3,8 +3,9 @@ import ReactDom from 'react-dom'
 //import { DefaultPlayer as Video } from 'react-html5video';
 //import 'react-html5video/dist/styles.css';
 
-import TopBar from './TopBar.js'
-import DoistDemoMain from './DoistDemoMain.js'
+import TopBar         from './TopBar.js'
+import DoistDemoMain  from './DoistDemoMain.js'
+import SpotOfJavaMain from './SpotOfJavaMain.js'
 
 var dummyForceUpdate = 0;
 
@@ -13,8 +14,9 @@ export default class NavMenu extends Component {
     super(props);
     this.displayAbout             = this.displayAbout.bind(this);
     this.displayGospel            = this.displayGospel.bind(this);
-    this.displayVirtualSupport    = this.displayVirtualSupport.bind(this);
+    this.displaySpotOfJavaDemo    = this.displaySpotOfJavaDemo.bind(this);
     this.displayDoistDemo         = this.displayDoistDemo.bind(this);
+    this.displayVirtualSupport    = this.displayVirtualSupport.bind(this);
     this.displayChildlikeHomepage = this.displayChildlikeHomepage.bind(this);
 
     this.mainViewRef     = props.mainViewRef;
@@ -142,6 +144,18 @@ export default class NavMenu extends Component {
     );
   }
 
+  
+  displaySpotOfJavaDemo(event) {
+    this.reactDomRender (
+      <div>
+        <TopBar className="TopBar" displayHeading={true}/>
+        <NavMenu/>
+        <SpotOfJavaMain/>
+      </div>,
+      this.targetContainer
+    );
+  }
+
   displayDoistDemo(event) {
     this.reactDomRender (
       <div>
@@ -257,6 +271,8 @@ export default class NavMenu extends Component {
         <div>&nbsp;<i className="far fa-folder" style={{"color": "#ffffff"}}>&nbsp;&nbsp;</i><a href="javascript:void(0)" onClick={this.displayAbout}>About</a></div>
         <div>&nbsp;</div>
         <div>&nbsp;<i className="far fa-folder" style={{"color": "#ffffff"}}>&nbsp;&nbsp;</i><a href="javascript:void(0)" onClick={this.displayGospel}>The&nbsp;Gospel</a></div>
+        <div>&nbsp;</div>
+        <div>&nbsp;<i className="far fa-folder" style={{"color": "#ffffff"}}>&nbsp;&nbsp;</i><a href="javascript:void(0)" onClick={this.displaySpotOfJavaDemo}>SpotOfJava&nbsp;Demo</a></div>
         <div>&nbsp;</div>
         <div>&nbsp;<i className="far fa-folder" style={{"color": "#ffffff"}}>&nbsp;&nbsp;</i><a href="javascript:void(0)" onClick={this.displayDoistDemo}>Doist&nbsp;Demo</a></div>
         <div>&nbsp;</div>
