@@ -1,0 +1,26 @@
+{
+  "DoistDemoGuide": {
+
+    "demoComponents": [
+      {
+        "name": "nodeDemo",
+        "url":  "https://api.kpsportfolio.info/nodeDemo",
+        "sleep": 10,
+        "msg": "If I node you were coming, I would have baked a cake!"
+      },
+      {
+        "name": "pythonDemo",
+        "url":  "https://api.kpsportfolio.info/pythonDemo",
+        "sleep": 10,
+        "msg": "Sssssssay! Come a little closer so we can visit."
+      },
+      {
+        "name": "goDemo",
+        "url":  "https://api.kpsportfolio.info/goDemo",
+        "sleep": 10,
+        "msg": "Go, Lang, go!"
+      }
+    ]
+  }
+}
+

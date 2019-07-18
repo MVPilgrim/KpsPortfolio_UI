@@ -1,10 +1,11 @@
-import React, {Component} from 'react'
-import ReactDom from 'react-dom'
+import React, {Component} from 'react';
+import ReactDom from 'react-dom';
 //import { DefaultPlayer as Video } from 'react-html5video';
 //import 'react-html5video/dist/styles.css';
 
 import TopBar from './TopBar.js'
-import DoistDemoMain from './DoistDemoMain.js'
+import DoistDemoMain from './DoistDemoMain.js';
+import SpotOfJavaMain from './SpotOfJavaMain.js';
 
 var dummyForceUpdate = 0;
 
@@ -13,8 +14,9 @@ export default class NavMenu extends Component {
     super(props);
     this.displayAbout             = this.displayAbout.bind(this);
     this.displayGospel            = this.displayGospel.bind(this);
-    this.displayVirtualSupport    = this.displayVirtualSupport.bind(this);
+    this.displaySpotOfJavaDemo = this.displaySpotOfJavaDemo.bind(this);
     this.displayDoistDemo         = this.displayDoistDemo.bind(this);
+    this.displayVirtualSupport    = this.displayVirtualSupport.bind(this);
     this.displayChildlikeHomepage = this.displayChildlikeHomepage.bind(this);
 
     this.mainViewRef     = props.mainViewRef;
@@ -137,6 +139,17 @@ export default class NavMenu extends Component {
               </div>
             </div>
         </div>
+      </div>,
+      this.targetContainer
+    );
+  }
+
+  displaySpotOfJavaDemo(event) {
+    this.reactDomRender (
+      <div>
+        <TopBar className="TopBar" displayHeading={true}/>
+        <NavMenu/>
+        <SpotOfJavaMain/>
       </div>,
       this.targetContainer
     );
