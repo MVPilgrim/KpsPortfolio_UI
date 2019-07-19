@@ -1,25 +1,25 @@
 {
-  "name": "KpsPortfolio_Website",
+  "name": "KpsPortfolio",
   "version": "1.0.0",
-  "description": "KpsPortfolio Website",
-  "main": "index.js",
+  "description": "KpsPortfolio",
+  "private": true,
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "build": "nwb build-react-app",
+    "clean": "nwb clean-app",
+    "start": "nwb --host localhost --port 3000 serve-react-app",
+    "test": "nwb test-react",
+    "test:coverage": "nwb test-react --coverage",
+    "test:watch": "nwb test-react --server"
   },
-  "author": "CodeMix",
-  "license": "ISC",
   "dependencies": {
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-scripts": "^2.1.5"
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-html5video": "^2.5.1"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "devDependencies": {
+    "nwb": "0.23.x"
+  },
+  "author": "Kevin P. Stephenson",
+  "license": "MIT",
+  "repository": ""
 }

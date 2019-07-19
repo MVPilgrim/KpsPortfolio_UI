@@ -10,8 +10,6 @@ export default class SOJPopupBasic extends Component {
     this.closePopup      = this.closePopup.bind(this);
     this.queryHello      = this.queryHello.bind(this);
     this.qhParseResponse = this.qhParseResponse.bind(this);
-<<<<<<< HEAD
-
     this.msg             = "";
     this.src             = "";
   }
@@ -37,7 +35,6 @@ export default class SOJPopupBasic extends Component {
   }
   qhParseResponse(xhrResponse) {
     var jsonResponse = JSON.parse(xhrResponse);
-<<<<<<< HEAD
     this.msg = jsonResponse.msg;
     this.src = jsonResponse.src;
     this.forceUpdate();

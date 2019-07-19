@@ -22,7 +22,7 @@ export default class NavMenu extends Component {
     this.mainViewRef     = props.mainViewRef;
     this.reactDomRender  = ReactDom.render;
     this.reactDomRender  = this.reactDomRender.bind(this);
-    this.targetContainer = document.getElementById('app');
+    this.targetContainer = document.getElementById('root');
 
     this.state = {
       displayClhpSun        : false,
@@ -52,7 +52,7 @@ export default class NavMenu extends Component {
             <ul>
               <li>The Gospel of Jesus Christ is by far the most important selection here.</li>
               <li>Doist Demo uses APIs from the Todoist and Twist products to send a short message that is transferred through a number of components
-                  implemented in different ways until the message makes it's way back to the browser and is logged in a web page. 
+                  implemented in different ways until the message makes it's way back to the browser and is logged in a web page.
                   Amazon Web Services provide the infrastructure for the demo as well as the web site as a whole.
               </li>
               <li>The Virtual Support menu item describes an idea for supporting software product customers in a virtual space.</li>
