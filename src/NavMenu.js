@@ -47,7 +47,7 @@ export default class NavMenu extends Component {
             proficiency in software development and related technologies. Other items provide
             an idea of the kind of person I am.
           </p><br/>
-          <p className="TextBody">
+          <div className="TextBody">
             Let me give you an overview of the menu to help you choose.
             <ul>
               <li>The Gospel of Jesus Christ is by far the most important selection here.</li>
@@ -58,8 +58,8 @@ export default class NavMenu extends Component {
               <li>The Virtual Support menu item describes an idea for supporting software product customers in a virtual space.</li>
               <li>The Childlike Homepage item is a rendering from memory of a delightful homepage I saw many years ago.</li>
             </ul>
-          </p>
-          <p className="TextBody">
+          </div>
+          <div className="TextBody">
             Additional notes:
             <ul>
               <li>All the source code for Doist Demo as well as the entire web site is in Github.</li>
@@ -72,12 +72,12 @@ export default class NavMenu extends Component {
                   <li>Demonstrate use cases for IBM's Watson.</li>
                 </ul>
             </ul>
-          </p><br/>
+          </div><br/>
           <p className="TextBody">
             By the way, when you're ready for that "spot of Java", please let me know.
           </p>
           <p>
-            <span style={{"font-family": "Trattatello, fantasy","font-size": "2em","float": "left","margin-left": "350px"}}>
+            <span style={{"fontFamily": "Trattatello, fantasy","fontSize": "2em","float": "left","marginLeft": "350px"}}>
               Kevin P. Stephenson
             </span>
           </p>
@@ -100,7 +100,7 @@ export default class NavMenu extends Component {
             </p>
             <br/>
             <br/>
-            <span style={{"color": "#505050", "font-size": "3.0em", "text-align": "center"}}>John 3:16</span>
+            <span style={{"color": "#505050", "fontSize": "3.0em", "textAlign": "center"}}>John 3:16</span>
             <br/>
             <div className="GospelText">
               <span gospel-tooltip="God was, is, and will always be. He created all things including you.">For God</span><br/>
@@ -115,7 +115,7 @@ export default class NavMenu extends Component {
                 Will you believe?
               </p>
             </div>
-            <span style={{"color": "black", "font-size": "1.5em", "text-align": "center"}}>If you do, tell God, from your heart, something like this:</span><br/>
+            <span style={{"color": "black", "fontSize": "1.5em", "textAlign": "center"}}>If you do, tell God, from your heart, something like this:</span><br/>
             <div className="GospelPrayer">
               <div style={{"margin": "0 2% 0 5%"}}>
                 "Lord, I need you. Please come into my life.
@@ -128,13 +128,13 @@ export default class NavMenu extends Component {
             </div>
             <br/>
             <div className="GospelResources">
-              <div style={{"text-align": "left"}}>
+              <div style={{"textAlign": "left"}}>
                  Here are links to various resources to learn more about God, Jesus Christ,
                  and the Bible.
-                <ul style={{"margin-top": "-2px"}}>
-                  <li><a class="Gospel" href="javascript:window.open('http://www.gotquestions.org','jav','width=1200,height=800,resizable=yes')">gotquestions.org: </a>Hundreds of thousands questions answered about God, Jesus Christ, and the Bible.</li>
-                  <li><a class="Gospel" href="javascript:window.open('https://www.gotquestions.org/what-is-the-Bible.html','jav','width=1200,height=800,resizable=yes')">gotquestions.org: </a>What is the Bible?</li>
-                  <li><a class="Gospel" href="javascript:window.open('https://www.biblegateway.com','jav','width=1200,height=800,resizable=yes')">biblegateway.com: </a>Many Bible translations.</li>
+                <ul style={{"marginTop": "-2px"}}>
+                  <li><a className="Gospel" href="javascript:window.open('http://www.gotquestions.org','jav','width=1200,height=800,resizable=yes')">gotquestions.org: </a>Hundreds of thousands questions answered about God, Jesus Christ, and the Bible.</li>
+                  <li><a className="Gospel" href="javascript:window.open('https://www.gotquestions.org/what-is-the-Bible.html','jav','width=1200,height=800,resizable=yes')">gotquestions.org: </a>What is the Bible?</li>
+                  <li><a className="Gospel" href="javascript:window.open('https://www.biblegateway.com','jav','width=1200,height=800,resizable=yes')">biblegateway.com: </a>Many Bible translations.</li>
                 </ul>
               </div>
             </div>
@@ -181,7 +181,7 @@ export default class NavMenu extends Component {
                   Connect:Direct can transfer many types of files on many types of computer systems with application integration capabilities on
                   both the sending and receiving sides.
                 </p><br/>
-                <p className="TextBodyColumn">
+                <div className="TextBodyColumn">
                   My idea was to create a dedicated virtual support space for each Connect:Direct customer.
                   Support personnel and customer technicians could collaborate in this virtual space to solve issues the customer encounters with Connect:Direct.
                   The space contains tools to:
@@ -191,12 +191,12 @@ export default class NavMenu extends Component {
                     <li>Display configuration diagrams of the customer's network and instances of Connect:Direct.</li>
                     <li>Provision C:D simulators to visualize C:D execution using the events recorded in log files (or Statistics Files as they are called).</li>
                   </ul>
-                </p>
+                </div>
                 <p className="TextBodyColumn">
                   I used OpenSource software called OpenSimulator for the virtual environment. It is patterned after the SecondLife virtual world.
                 </p><br/>
-                <p className="TextBodyColumn">
-                  <span style={{"font-size": "20px", "font-weight": "bold", "color": "black"}}>Before watching</span> this video please try and look past the following
+                <div className="TextBodyColumn">
+                  <span style={{"fontSize": "20px", "fontWeight": "bold", "color": "black"}}>Before watching</span> this video please try and look past the following
                   issues with the quality of the video. (I might trying remaking the video one day to improve it.) Please focus on the idea itself of using a virtual space to collaborate with
                   customers to solve support issues.
                   <ul>
@@ -209,14 +209,14 @@ export default class NavMenu extends Component {
                     <li>Messages displayed when the Connect:Direct simulator is running are not readable.</li>
                     <li>The moving parts that simulate objects and data flow are hard to see.</li>
                   </ul>
-                </p>
+                </div>
                 <p className="TextBodyColumn">
                   But undaunted, I present the video to you anyway. What do you think of the idea?
                 </p>
               </div>
               <div style={{"float": "left", "width": "50%"}}>
                 <video width="640" height="480" controls>
-                  <source src="VirtualSupport.mp4" type="video/mp4" />
+                  <source src={require("./Videos/VirtualSupport.mp4")}/>
                 </video>
               </div>
           </div>
@@ -242,7 +242,7 @@ export default class NavMenu extends Component {
               </p>
             </div>
             <div style={{"float": "left", "width": "70%"}}>
-              <img src={require("./Images/ChildlikeHomepage.png")} width="720px" height="480px" style={{"border-style": "solid", "border-width": "3px", "border-color": "dark gray"}} usemap="#clhpmap"/>
+              <img src={require("./Images/ChildlikeHomepage.png")} width="720px" height="480px" style={{"borderStyle": "solid", "borderWidth": "3px", "borderColor": "dark gray"}} useMap="#clhpmap"/>
               <div>
                 <map name="clhpmap">
                   <span clhp-tooltip="Children's pictures always need a sun."><area shape="rect" coords="0,0,215,160" href="javascript:void(0)" alt="Sun"/></span>
@@ -265,7 +265,8 @@ export default class NavMenu extends Component {
     return(
       <div className="NavMenu">
         <div>&nbsp;</div>
-        <div>&nbsp;<i className="far fa-folder" style={{"color": "#ffffff"}}>&nbsp;&nbsp;</i><a href="index.html">Home</a></div>
+        <div>&nbsp;<i className="far fa-folder" style={{"color": "#ffffff"}}>&nbsp;&nbsp;</i><a style={{"color": "#ffffff"}} href="index.html">Home</a></div>
+
         <div>&nbsp;</div>
         <div>&nbsp;<i className="far fa-folder" style={{"color": "#ffffff"}}>&nbsp;&nbsp;</i><a href="javascript:void(0)" onClick={this.displayAbout}>About</a></div>
         <div>&nbsp;</div>
