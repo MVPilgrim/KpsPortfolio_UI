@@ -122,7 +122,7 @@ export default class DoistDemoPane extends Component {
     }
     return rc
   }
-  
+
   invokeLambdaFunction(wsid) {
     console.log("invokeLambdaFunction() entered. wsid=" + wsid)
 
@@ -171,11 +171,11 @@ export default class DoistDemoPane extends Component {
     return(
       <div>
         <TopBar className="DoistDemoTopBar displayHeading={true}"/>
-        <ButtonDoistDemo label="Init Demo" style={{"width": "60px"}} handleClick={this.handleInitButtonClick}/>
-        <ButtonDoistDemo label="Directions" style={{"left": "13.5%", "width": "60px"}} handleClick={this.handleDirectionsButtonClick}/>
-        <ButtonDoistDemo label="Clear Log" style={{"left": "17.5%", "width": "60px"}} handleClick={this.handleClearLogButtonClick}/>
-        <ButtonDoistDemo label="About" style={{"left": "21.5%"}} handleClick={this.handleAboutButtonClick}/>
-        <ButtonDoistDemo label="Dev Status" style={{"left": "24.0%", "width": "70px"}} handleClick={this.handleDevStatusButtonClick}/>
+        <ButtonDoistDemo label="About" style={{"left": "10.0%"}} handleClick={this.handleAboutButtonClick}/>
+        <ButtonDoistDemo label="Directions" style={{"left": "13.0%"}} handleClick={this.handleDirectionsButtonClick}/>
+        <ButtonDoistDemo label="Init Demo" style={{"left": "17.0%"}} handleClick={this.handleInitButtonClick}/>
+        <ButtonDoistDemo label="Clear Log" style={{"left": "19.0%", "width": "60px"}} handleClick={this.handleClearLogButtonClick}/>
+        <ButtonDoistDemo label="Dev Status" style={{"left": "21.5%", "width": "70px"}} handleClick={this.handleDevStatusButtonClick}/>
         <div className="DoistDemoHeading">Doist Demo Message Log</div>
         <DisplayMsg msgArray={this.state.msgArray}/>
         <DDPopupAbout displayPopup={this.state.displayAbout} closeCallback={this.closeAbout}/>
@@ -200,7 +200,7 @@ class DisplayMsg extends Component {
     if (this.props.msgArray.length > 0) {
       retEle = (
         <ul className="DisplayLog">
-          {this.props.msgArray.map((item,index) => 
+          {this.props.msgArray.map((item,index) =>
             <div>{item}</div>
           )}
         </ul>

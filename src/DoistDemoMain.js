@@ -11,7 +11,7 @@ export default class DoistDemoMain extends Component {
           <DoistDemoPane/>
         </div>
         <iframe name="Todoist" className="Todoist" src="https://todoist.com"/>
-        <iframe name="Twist" className="Twist" src="https://twist.com"/>
+        <iframe name="Twist"   className="Twist"   src="https://twist.com"/>
      </div>
     );
   }

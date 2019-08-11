@@ -80,7 +80,7 @@ a:hover, a:active {
 
 .DoistDemoHeading {
   top: 12.0%;
-  left: 20.0%;
+  left: 23.5%;
   position: fixed;
   text-align: center;
   color: #5a5a5a;
@@ -101,7 +101,7 @@ a:hover, a:active {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 12px;
+  font-size: 16px;
   margin: 1px 1px;
   cursor: pointer;
 }
@@ -203,20 +203,12 @@ h1 {
   font-size: 2em;
 }
 
-.GospelResources {
-  margin: 0px 350px 0px 350px;
-  text-align: center;
-  color: black;
-  font-family: "Times New Roman", Helvetica, serif;
-  font-size: 1.3em;
-}
-
 a.Gospel:link {
-  color: SeaGreen;
+  color: darkcyan;
   font-weight: bold;
 }
 a.Gospel:visited {
-  color: SeaGreen;
+  color: darkcyan;
   font-weight: bold;
 }
 a.Gospel:hover {
@@ -226,11 +218,20 @@ a.Gospel:hover {
 
 .GospelPrayer {
   text-align: justify;
-  text-justify: inter-word;
+
   color: #4d4d4d;
   font-family: Arial, Helvetica, serif;
   font-size: 1.3em;
-  margin: 0px 400px 0px 400px;
+  margin: 0px 30% 0px 30%;
+}
+
+.GospelResources {
+  position: relative;
+  margin: 0 0 0 30%;
+  text-align: left;
+  color: black;
+  font-family: "Times New Roman", Helvetica, serif;
+  font-size: 1.3em;
 }
 
 [gospel-tooltip]:hover {
@@ -364,6 +365,20 @@ a.Gospel:hover {
 /*
  *  * Start of SpotOfJavaDemo css
  *  */
+
+
+ a.MiscLink:link {
+   color: darkcyan;
+   font-weight: bold;
+ }
+ a.MiscLink:visited {
+   color: darkcyan;
+   font-weight: bold;
+ }
+ a.MiscLink:hover {
+   color: darkgreen;
+   font-weight: bold;
+ }
 
 .SpotOfJavaDemoPane {
   height: 93.5%;

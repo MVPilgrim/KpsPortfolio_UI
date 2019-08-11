@@ -42,45 +42,57 @@ export default class NavMenu extends Component {
           <h1 className="PageHeading">About KPS Portfolio</h1>
           <img className="KpsPhoto" src={require("./Images/KpsButler.png")}/>
           <p className="TextBody">
-            Hello!  My name is Kevin and I'll be your server today.
-            I'll be serving up various items from my portfolio which demonstrate technical
-            proficiency in software development and related technologies. Other items provide
-            an idea of the kind of person I am.
-          </p><br/>
-          <div className="TextBody">
-            Let me give you an overview of the menu to help you choose.
-            <ul>
-              <li>The Gospel of Jesus Christ is by far the most important selection here.</li>
-              <li>Doist Demo uses APIs from the Todoist and Twist products to send a short message that is transferred through a number of components
-                  implemented in different ways until the message makes it's way back to the browser and is logged in a web page.
-                  Amazon Web Services provide the infrastructure for the demo as well as the web site as a whole.
-              </li>
-              <li>The Virtual Support menu item describes an idea for supporting software product customers in a virtual space.</li>
-              <li>The Childlike Homepage item is a rendering from memory of a delightful homepage I saw many years ago.</li>
-            </ul>
-          </div>
-          <div className="TextBody">
-            Additional notes:
-            <ul>
-              <li>All the source code for Doist Demo as well as the entire web site is in Github.</li>
-              <li>The KPS Portfolio web site is written in reactjs and JSX.</li>
-              <li>Some other demos I have in mind:</li>
-                <ul>
-                  <li>Build the Doist Demo components using DevOps tools and techniques (Jenkins, for example).</li>
-                  <li>Scan log files using machine learning techniques to help with problem diagnosis.</li>
-                  <li>Write Java code to demonstrate the newest capabilites in the language/platform.</li>
-                  <li>Demonstrate use cases for IBM's Watson.</li>
-                </ul>
-            </ul>
-          </div><br/>
+            Hello!  My name is Kevin and I'll be your server today. I realize that I'm dressed like the proverbial butler, Jeeves,
+            but it emphasizes the goal of being at your service.
+          </p>
           <p className="TextBody">
-            By the way, when you're ready for that "spot of Java", please let me know.
+            May I begin by suggesting a non-alcoholic apertif (a contradiction in terms, I know) which is Living Water? There is nothing else like it.
+            For the main course, I recommend a hearty portion of software technology - our Doist Demo. I think you'll find it quite satisfying.
+            For dessert, I suggest one of the light, non-technical items such as the "Childlike Homepage". And, of course, please have that
+            "Spot of Java" to round out the meal.
           </p>
-          <p>
-            <span style={{"fontFamily": "Trattatello, fantasy","fontSize": "2em","float": "left","marginLeft": "350px"}}>
-              Kevin P. Stephenson
-            </span>
+          <br/><p className="TextBody">
+            May I also tell you about our facilities and services?
+            The design firm, Reactjs and JSX, served as the architect and general contractor for our dining facility. Major subcontractors include CSS Inc.
+            and the HTML 5 Agency.
           </p>
+          <br/><p className="TextBody">
+            In our kitchen, we use Github as our pantry to store ingredients for our software dishes.
+            Feel free to take a peek at <a className="MiscLink" href="javascript:window.open('https://github.com/MVPilgrim?tab=repositories','jav','width=1200,height=800,resizable=yes')">KpsPortfolio Pantry </a>
+            Appliances are provided by the Always Waiting to Serve Corporation. The AWS EC2 oven and cooktop are some of the best. Our dishes are
+            cooked to perfection after being prepared using our unique Command assembly Line Interface with our counter tops, mixers, bowls and utensils.
+          </p>
+          <br/><div className="TextBody">
+            Our communication system
+            provides a Gateway (like the swinging doors to the kitchen where servers enter and exit) from servers to manager and chef. We want
+            to make sure orders and any other communications from our customers are accurate and secure.
+          </div>
+          <br/><div className="TextBody">
+            For childrens' enjoyment, we have a coloring booklet called "Mary Had A Little Lambda". This keeps them engaged while their
+            meal is being prepared.
+          </div>
+          <br/><div className="TextBody">
+            For childrens' safety, we introduced a special mechanism called "Webbings for Sockets" to protect them from open electrial outlets.
+            The outlets are covered with a thin, elastic webbing that keeps children from touching the metal in the socket. The webbing and the
+            socket receptor communicate with each other as they determine whether or not to allow current to flow when something is pushed into the socket.
+            The webbing senses the shape and dimensions of the plug and transmits that information to the socket. The socket determines if
+            the object being inserted is a true, correct plug (and not a child trying to insert a couple of pennies!).
+            If so, electrical current is switched on.
+          </div>
+          <br/><div className="TextBody">
+            But I'm going on and on. Let me submit your order. Forgive me while I speak into my lapel.
+            "A fountain, bits on a shingle, sweet baby nothing and Java from Java. x86 the mints."
+          </div>
+          <br/><p className="TextBody">
+            Thanks so much for dining with us today!
+          </p>
+          <br/><div style={{"float": "left","marginLeft": "325px"}}>
+            <img src={require("./Images/signature.png")} width="500px" height="83px"/>
+          </div>
+          <br/><br/><br/><br/><br/><br/><br/><br/>
+          <div className="TextBody" style={{"float": "left","marginLeft": "350px"}}>
+            P.S. Here is my E-mail address: <a className="Gospel" href="mailto:mv.pilgrim.empl@gmail.com?Subject=KpsPortfolio%20Inquiry" target="_top">mv.pilgrim.empl@gmail.com</a>
+          </div>
         </div>
       </div>
       ,this.targetContainer
@@ -94,50 +106,50 @@ export default class NavMenu extends Component {
         <NavMenu/>
         <div className="MainView" style={{"overflow": "scroll"}}>
           <h1 className="PageHeading">The Gospel</h1>
-            <p className="TextBody">
-              Putting your faith in Jesus Christ is absolutely the most important thing you can do.
-              Please take a minute or two and read the Bible verse to find out why. Hover over each line to see explanatory text.
+          <p className="GospelPrayer">
+            Putting your faith in Jesus Christ is absolutely the most important thing you can do.
+            Please take a minute or two and read the Bible verse below in red to find out why. Hover over each line to see explanatory text.
+          </p>
+          <br/>
+          <br/>
+          <span style={{"color": "#505050", "fontSize": "3.0em", "textAlign": "center"}}>John 3:16</span>
+          <br/>
+          <div className="GospelText">
+            <span gospel-tooltip="God was, is, and will always be. He created all things including you.">For God</span><br/>
+            <span gospel-tooltip="His whole creation, all its people and you.">loved the world so much</span><br/>
+            <span gospel-tooltip="God gave his most precious Treasure for you.">that he gave his one and only Son</span><br/>
+            <span gospel-tooltip="That he is the Son of God, Savior and Lord. That he died on the cross for your sins and rose from the dead.">so that everyone who believes in him</span><br/>
+            <span gospel-tooltip="Be punished in hell forever because of your sins.">will not perish</span><br/>
+            <span gospel-tooltip="To know God and glorify and enjoy him forever in heaven.">but have eternal life.</span><br/>
+          </div>
+          <div className="GospelEpilog">
+            <p>
+              Will you believe?
             </p>
-            <br/>
-            <br/>
-            <span style={{"color": "#505050", "fontSize": "3.0em", "textAlign": "center"}}>John 3:16</span>
-            <br/>
-            <div className="GospelText">
-              <span gospel-tooltip="God was, is, and will always be. He created all things including you.">For God</span><br/>
-              <span gospel-tooltip="His whole creation, all its people and you.">loved the world so much</span><br/>
-              <span gospel-tooltip="God gave his most precious Treasure for you.">that he gave his one and only Son</span><br/>
-              <span gospel-tooltip="That he is the Son of God, Savior and Lord. That he died on the cross for your sins and rose from the dead.">so that everyone who believes in him</span><br/>
-              <span gospel-tooltip="Be punished in hell forever because of your sins.">will not perish</span><br/>
-              <span gospel-tooltip="To know God and glorify and enjoy him forever in heaven.">but have eternal life.</span><br/>
+          </div>
+          <span style={{"color": "black", "fontSize": "1.5em", "textAlign": "center"}}>If you do, tell God, from your heart, something like this:</span><br/><br/>
+          <div className="GospelPrayer">
+            <div>
+              "Lord, I need you. Please come into my life.
+              Thank you for dying on the cross for my sins.
+              I believe you did that and you rose from the dead.
+              Because you are alive, I can live forever, too, in heaven with you.
+              Please show me what's next."
+              Amen.
             </div>
-            <div className="GospelEpilog">
-              <p>
-                Will you believe?
-              </p>
+          </div>
+          <br/>
+          <div className="GospelResources">
+            <div>
+               Here are links to various resources to learn more about God, Jesus Christ,
+               and the Bible.
+              <ul style={{"marginTop": "-2px"}}>
+                <li><a className="Gospel" href="javascript:window.open('http://www.gotquestions.org','jav','width=1200,height=800,resizable=yes')">gotquestions.org: </a>Hundreds of thousands questions answered about God, Jesus Christ, and the Bible.</li>
+                <li><a className="Gospel" href="javascript:window.open('https://www.gotquestions.org/what-is-the-Bible.html','jav','width=1200,height=800,resizable=yes')">gotquestions.org: </a>What is the Bible?</li>
+                <li><a className="Gospel" href="javascript:window.open('https://www.biblegateway.com','jav','width=1200,height=800,resizable=yes')">biblegateway.com: </a>Many Bible translations.</li>
+              </ul>
             </div>
-            <span style={{"color": "black", "fontSize": "1.5em", "textAlign": "center"}}>If you do, tell God, from your heart, something like this:</span><br/>
-            <div className="GospelPrayer">
-              <div style={{"margin": "0 2% 0 5%"}}>
-                "Lord, I need you. Please come into my life.
-                Thank you for dying on the cross for my sins.
-                I believe you did that and that you rose from the dead.
-                Because you are alive, I can live forever, too, in heaven with you.
-                Please show me what's next."
-                Amen.
-              </div>
-            </div>
-            <br/>
-            <div className="GospelResources">
-              <div style={{"textAlign": "left"}}>
-                 Here are links to various resources to learn more about God, Jesus Christ,
-                 and the Bible.
-                <ul style={{"marginTop": "-2px"}}>
-                  <li><a className="Gospel" href="javascript:window.open('http://www.gotquestions.org','jav','width=1200,height=800,resizable=yes')">gotquestions.org: </a>Hundreds of thousands questions answered about God, Jesus Christ, and the Bible.</li>
-                  <li><a className="Gospel" href="javascript:window.open('https://www.gotquestions.org/what-is-the-Bible.html','jav','width=1200,height=800,resizable=yes')">gotquestions.org: </a>What is the Bible?</li>
-                  <li><a className="Gospel" href="javascript:window.open('https://www.biblegateway.com','jav','width=1200,height=800,resizable=yes')">biblegateway.com: </a>Many Bible translations.</li>
-                </ul>
-              </div>
-            </div>
+          </div>
         </div>
       </div>,
       this.targetContainer
