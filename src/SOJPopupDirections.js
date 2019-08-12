@@ -21,7 +21,7 @@ export default class SOJPopupDirections extends Component {
           <h1>Directions for the SpotOfJava Demonstration</h1>
           <div className="PopupTextBody">
             <p>
-              Just click on one of the "SpotOfJava" icons to execute a demo.
+              Just click on one of the "SOJ" links in the menu bar to execute a demo (currently, there is only one SOJ demo).
             </p>
           </div>
         </div>

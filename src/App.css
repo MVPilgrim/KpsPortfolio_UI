@@ -444,10 +444,10 @@ a.Gospel:hover {
 }
 
 a.SOJ:link, a:visited {
-  color:  darkred;
+  color:  darkcyan;
   text-align: center;
   text-decoration: none;
 }
 a.SOJ:hover, a:active {
-  color: darkcyan;
+  color: darkgreen;
 }

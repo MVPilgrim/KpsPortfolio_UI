@@ -188,42 +188,39 @@ export default class NavMenu extends Component {
             <h1 className="PageHeading">Virtual Support</h1>
               <div style={{"float": "left", "width": "50%"}}>
                 <p className="TextBodyColumn">
-                  I made this video a number of years ago as an entry in a contest at a previous company to create innovative ideas for product enhancements.
+                  I made this video a number of years ago as an entry in a contest at a previous company. The point of the contest was to promote the creation of innovative ideas for product enhancements.
                   The product I worked on was called Connect:Direct aka Network DataMover.
                   Connect:Direct can transfer many types of files on many types of computer systems with application integration capabilities on
                   both the sending and receiving sides.
                 </p><br/>
                 <div className="TextBodyColumn">
                   My idea was to create a dedicated virtual support space for each Connect:Direct customer.
-                  Support personnel and customer technicians could collaborate in this virtual space to solve issues the customer encounters with Connect:Direct.
-                  The space contains tools to:
+                  Support personnel and customer technicians could collaborate in this virtual space to solve problems customers might encounter with Connect:Direct.
+                  The virtual space contains tools to:
                   <ul>
                     <li>View diagnostic information.</li>
                     <li>Access historical information about previous issues.</li>
                     <li>Display configuration diagrams of the customer's network and instances of Connect:Direct.</li>
-                    <li>Provision C:D simulators to visualize C:D execution using the events recorded in log files (or Statistics Files as they are called).</li>
+                    <li>Simulate and visualize Connect:Direct execution using the events recorded in log files.</li>
                   </ul>
                 </div>
                 <p className="TextBodyColumn">
-                  I used OpenSource software called OpenSimulator for the virtual environment. It is patterned after the SecondLife virtual world.
+                  I used OpenSource software called OpenSimulator to create the virtual environment. This environment is similar to the virtual world called SecondLife.
                 </p><br/>
                 <div className="TextBodyColumn">
                   <span style={{"fontSize": "20px", "fontWeight": "bold", "color": "black"}}>Before watching</span> this video please try and look past the following
-                  issues with the quality of the video. (I might trying remaking the video one day to improve it.) Please focus on the idea itself of using a virtual space to collaborate with
-                  customers to solve support issues.
+                  imperfections with the quality of the video. Please focus on the idea itself of using a virtual space to collaborate with customers to solve support issues.
                   <ul>
-                    <li>There was a deadline to meet for the contest.</li>
-                    <li>This was my first time to make a video.</li>
-                    <li>And so it was my first time to use video and audio editing tools.</li>
+                    <li>It was my first time to use video and audio editing tools.</li>
                     <li>The avatars in OpenSim can't move their lips which distracts from the dialog.</li>
                     <li>I voiced the dialog myself. I used an audio editing tool to lower the frequency of my voice for one avatar
-                        and to raise it for the other. Unfortunately, the effect seems a little comical.</li>
-                    <li>Messages displayed when the Connect:Direct simulator is running are not readable.</li>
-                    <li>The moving parts that simulate objects and data flow are hard to see.</li>
+                        and to raise it for the other. Unfortunately, the voicing sounds a little silly.</li>
+                    <li>Messages displayed by the Connect:Direct simulator are not readable.</li>
+                    <li>The moving parts that simulate objects and data flow within Connect:Direct are hard to see.</li>
                   </ul>
                 </div>
                 <p className="TextBodyColumn">
-                  But undaunted, I present the video to you anyway. What do you think of the idea?
+                  But undaunted, I present the video to you anyway.
                 </p>
               </div>
               <div style={{"float": "left", "width": "50%"}}>
@@ -254,15 +251,15 @@ export default class NavMenu extends Component {
               </p>
             </div>
             <div style={{"float": "left", "width": "70%"}}>
-              <img src={require("./Images/ChildlikeHomepage.png")} width="720px" height="480px" style={{"borderStyle": "solid", "borderWidth": "3px", "borderColor": "dark gray"}} useMap="#clhpmap"/>
+              <img src={require("./Images/ChildlikeHomepage.png")} width="958px" height="638px" style={{"borderStyle": "solid", "borderWidth": "3px", "borderColor": "dark gray"}} useMap="#clhpmap"/>
               <div>
                 <map name="clhpmap">
-                  <span clhp-tooltip="Children's pictures always need a sun."><area shape="rect" coords="0,0,215,160" href="javascript:void(0)" alt="Sun"/></span>
-                  <span clhp-tooltip="And clouds go with the sun."><area shape="rect" coords="250,25,525,215" href="https://www.google.com" alt="House"/></span>
-                  <span clhp-tooltip="A home for the homepage."><area shape="rect" coords="550,75,700,300" href="https://www.google.com" alt="House"/></span>
-                  <span clhp-tooltip="Must have flowers."><area shape="rect" coords="450,250,550,300" href="https://www.google.com" alt="House"/></span>
-                  <span clhp-tooltip="24 is good age."><area shape="rect" coords="550,375,700,430" href="https://www.google.com" alt="Signature"/></span>
-                  <span clhp-tooltip="Lots of good, green grass."><area shape="rect" coords="250,325,500,455" href="https://www.google.com" alt="Signature"/></span>
+                  <span clhp-tooltip="Children's pictures always need a sun."><area shape="rect" coords="0,0,286,213" href="javascript:void(0)" alt="Sun"/></span>
+                  <span clhp-tooltip="And clouds go with the sun."><area shape="rect" coords="333,33,698,333" href="https://www.google.com" alt="House"/></span>
+                  <span clhp-tooltip="A home for the homepage."><area shape="rect" coords="732,100,931,399" href="https://www.google.com" alt="House"/></span>
+                  <span clhp-tooltip="Must have flowers."><area shape="rect" coords="599,333,732,399" href="https://www.google.com" alt="House"/></span>
+                  <span clhp-tooltip="24 is good age."><area shape="rect" coords="732,499,931,572" href="https://www.google.com" alt="Signature"/></span>
+                  <span clhp-tooltip="Lots of good, green grass."><area shape="rect" coords="333,432,665,605" href="https://www.google.com" alt="Signature"/></span>
                 </map>
               </div>
             </div>

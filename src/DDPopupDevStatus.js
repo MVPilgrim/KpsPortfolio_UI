@@ -22,16 +22,16 @@ export default class DDPopupDevStatus extends Component {
           <h1>Doist Demo Development Status</h1>
           <div className="PopupTextBody">
             <p>
-              The current "release" of the demo is "MVD 01"; that is, Minimum Viable Demo 01.
+              The current "release" of the demo is "MVD 0.0.1"; that is, Minimum Viable Demo 0.0.1.
             </p>
             <p>
-              Here is the list of enhancements for MVD 02:
+              I'm planning to implement the following enhancements for MVD 0.0.2:
               <ul>
-                <li>Add services to receive, annotate, and forward demo messages currently tranmitted through various components.
+                <li>Add additional services/components which will to receive, annotate, and forward demo messages (a chain of components which will receive and process the message in sequence).
+                    The Lambda Function will send the message to the first component on the list.
                     Implementing these services will add to the technologies already in use and so demonstrate a level of proficiency in them.
                </li>
-               <li>Add a graphical display of messages flowing though the components.</li>
-               <li>Ala Rube Goldberg, add a graphical display of messages flowing through the components.</li>
+               <li>Add a graphical display of messages flowing though the components. This should make is clearer about how the demo operages.</li>
               </ul>
             </p>
           </div>

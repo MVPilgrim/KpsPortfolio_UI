@@ -22,7 +22,7 @@ export default class SOJPopupAbout extends Component {
           <div className="PopupTextBody">
             <p>
               The SpotOfJava Demonstration currently has a single "Spot of Java" - SOJBasic with a "Hello World!" implementation. Over time, I plan on adding
-              more basic demos within SOJBasic and other "Spots" to demonstrate proficiency with various Java capabilities.
+              more SOJs to demonstrate proficiency with various Java capabilities.
             </p>
           </div>
         </div>
