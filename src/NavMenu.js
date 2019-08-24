@@ -58,7 +58,13 @@ export default class NavMenu extends Component {
           </p>
           <br/><p className="TextBody">
             In our kitchen, we use Github as our pantry to store ingredients for our software dishes.
-            Feel free to take a peek at <a className="MiscLink" href="javascript:window.open('https://github.com/MVPilgrim?tab=repositories','jav','width=1200,height=800,resizable=yes')">KpsPortfolio Pantry </a>
+            Feel free to take a peek at <a className="MiscLink"
+              href="javascript:window.open('https://github.com/MVPilgrim?tab=repositories',
+              'Github',
+              'width=1200,height=800,resizable=yes,location=yes,menubar=yes,scrollbars=yes,status=yes,titlebar=yes')"
+              >KpsPortfolio Pantry.</a>
+        </p>
+          <br/><p className="TextBody">
             Appliances are provided by the Always Waiting to Serve Corporation. The AWS EC2 oven and cooktop are some of the best. Our dishes are
             cooked to perfection after being prepared using our unique Command assembly Line Interface with our counter tops, mixers, bowls and utensils.
           </p>
@@ -91,7 +97,7 @@ export default class NavMenu extends Component {
           </div>
           <br/><br/><br/><br/><br/><br/><br/><br/>
           <div className="TextBody" style={{"float": "left","marginLeft": "350px"}}>
-            P.S. Here is my E-mail address: <a className="Gospel" href="mailto:mv.pilgrim.empl@gmail.com?Subject=KpsPortfolio%20Inquiry" target="_top">mv.pilgrim.empl@gmail.com</a>
+            P.S. Here is my E-mail address: <a className="MiscLink" href="mailto:mv.pilgrim.empl@gmail.com?Subject=KpsPortfolio%20Inquiry" target="_top">mv.pilgrim.empl@gmail.com</a>
           </div>
         </div>
       </div>
@@ -213,7 +219,7 @@ export default class NavMenu extends Component {
                   <ul>
                     <li>It was my first time to use video and audio editing tools.</li>
                     <li>The avatars in OpenSim can't move their lips which distracts from the dialog.</li>
-                    <li>I voiced the dialog myself. I used an audio editing tool to lower the frequency of my voice for one avatar
+                    <li>I voiced the dialog myself using an audio editing tool to lower the frequency of my voice for one avatar
                         and to raise it for the other. Unfortunately, the voicing sounds a little silly.</li>
                     <li>Messages displayed by the Connect:Direct simulator are not readable.</li>
                     <li>The moving parts that simulate objects and data flow within Connect:Direct are hard to see.</li>
@@ -221,6 +227,9 @@ export default class NavMenu extends Component {
                 </div>
                 <p className="TextBodyColumn">
                   But undaunted, I present the video to you anyway.
+                </p>
+                <p className="TextBodyColumn">
+                  (BTW: you'll need an MP4 player.)
                 </p>
               </div>
               <div style={{"float": "left", "width": "50%"}}>

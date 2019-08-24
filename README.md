@@ -1,6 +1,9 @@
-# codemix-vanilla-react
-Template for project creation of React inside CodeMix
+# KpsPortfolio Website
 
-## Contents
+1. item 1
+2. item 2
+3. item 3.
 
-The template project is just an example Hello World that guide you through the use of React with the Expressjs framework to build a very simple web application that display the Hello World!!! Greeting
+* bullet 1
+* bullet 2
+* bullet 3
