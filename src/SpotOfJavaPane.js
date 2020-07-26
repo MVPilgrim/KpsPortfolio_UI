@@ -65,7 +65,7 @@ export default class SpotOfJavaPane extends Component {
 
         <ButtonSpotOfJava label="About" style={{"left": "9.5%"}} handleClick={this.handleAboutButtonClick}/>
         <ButtonSpotOfJava label="Directions" style={{"left": "12.0%", "width": "60px"}} handleClick={this.handleDirectionsButtonClick}/>
-        <ButtonSpotOfJava label="SOJ Basic" style={{"left": "16.0%", "width": "80px"}} handleClick={this.handleBasicButtonClick}/>
+        <ButtonSpotOfJava label="SOJ-Basic" style={{"left": "16.0%", "width": "80px"}} handleClick={this.handleBasicButtonClick}/>
 
         <div className="SpotOfJavaDemoHeading">Spot-of-Java Demo</div>
 

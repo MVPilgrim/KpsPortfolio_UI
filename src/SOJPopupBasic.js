@@ -52,8 +52,9 @@ export default class SOJPopupBasic extends Component {
           <h1 style={{"margin": "1.0% 0.0% 0px 7.5%"}}>SpotOfJava Basic</h1>
           <div className="PopupTextBody">
             <p>
-              SpotOfJava Basic demo queries a Spring Boot microservice running in the IBM Bluemix cloud.
-              It displays a "Hello World" type of message. It also displays the Java source code which produced the message. Click on the "Run SOJ Demo" link below to see the message.
+              The Spot-Of-Java Basic demo queries a Spring Boot microservice running in the IBM Cloud.
+              It displays a "Hello World" type of message. It also displays the Java source code for the microservice producing the message. Click the "Run Demo" link below
+              to see the message and source.
             </p>
           </div>
 
@@ -65,7 +66,7 @@ export default class SOJPopupBasic extends Component {
 
           <div style={{"margin": "0px 5.0% 0px 5.0%"}}>
             <p></p>
-            <p className="SOJ" style={{"margin": "0px 5.0% 0px 25.0%","fontSize": "25px"}}>SpotOfJava Basic Source</p>
+            <p className="SOJ" style={{"margin": "0px 5.0% 0px 32.0%","fontSize": "25px"}}>SOJ-Basic Source</p>
             <iframe srcdoc={this.src} name="SOJBasicSrcIframe" style={{"margin": "0px 0.0% 0px 0.0%","fontSize": "32px"}} width="100%" height="425px" title="SOJBasicSrcIframe">
             </iframe>
           </div>

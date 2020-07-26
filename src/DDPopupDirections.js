@@ -17,7 +17,7 @@ export default class DDPopupDirections extends Component {
     )
     if (this.props.displayPopup) {
       retEle = (
-        <div className="DDPopup">
+        <div className="DDPopup" style={{"overflow": "scroll"}}>
           <i className="far fa-window-close" style={{"float": "right","font-size": "25px","margin": "5px 10px 0 0","color": "#555555"}} onClick={this.closePopup}></i>
           <h1>Directions to Run Doist Demo</h1>
           <div className="PopupTextBody">
@@ -25,21 +25,60 @@ export default class DDPopupDirections extends Component {
               Here are the steps to run the Doist Demo.
             </p>
             <ul>
-              <li>In a separate browser window, log in to Todoist.com and then Twist.com using the credentials below (same credentials for both) if you have not logged in already:</li>
+              <li>Log in to todoist.com and then twist.com using your own id and password. If don't have an account, you can signup for one at each web site.</li>
+              <li>Configure Todoist:</li>
                 <ul>
-                  <li>Id: kpsportfolio1@gmail.com</li>
-                  <li>Password: DoistDemo</li>
+                  <li>Create a project named "KpsPortfolio"</li>
+                  <li>Under KpsPortfolio, create a sub-project named "DoistDemo"</li>
                 </ul>
-              <li>Refresh the Doist Demo page so that the Doist and Twist pages will display correctly in their respective display panes..</li>
-              <li>In the Twist pane on the bottom right of the screen, click the "DoistDemo" channel to display messages.</li>
-              <li>In the Todoist pane directly above, click the three-line menu icon at the top left.</li>
-              <li>Click the "RunDoistDemo" project.</li>
-              <li>In the Doist Demo menu bar to the left, click Init Demo.</li>
-              <li>Copy the text in the text box of the popup to the clipboard.</li>
-              <li>Click the "X" at the top right corner to close the popup.</li>
-              <li>In the Todoist pane, add a task with the copied text from the popup.</li>
-              <li>Watch the messages appear in the Twist display.</li>
-              <li>Watch the messages appear in the message log in the Doist Demo pane.</li>
+              <li>Configure Twist:</li>
+                <ul>
+                  <li>Create a channel named "KpsPortfolio".</li>
+                  <li>Under KpsPortfolio, create a thread named "DoistDemo".</li>
+                  <li>Create a Todoist integration.</li>
+                    <ul>
+                      <li>Click the elipsis, the three dots, to the right of the KpsPortfolio channel.</li>
+                      <li>Click "Add integrations...".</li>
+                      <li>Click "Browse".</li>
+                      <li>Scroll down and click "Todoist".</li>
+                      <li>For "Post to channel", select "KpsPortfolio".</li>
+                      <li>And from the following thread: select "DoistDemo".</li>
+                      <li>For "Who do you want to notify", select "Everyone in channel."</li>
+                      <li>Click "Install Integration."</li>
+                      <li>For "Which project", select "DoistDemo".</li>
+                      <li>For "notification options", click "Notify when tasks are completed or uncompleted."</li>
+                      <li>Click "Update Installation."</li>
+                    </ul>
+                  <li>Create the Twist-To-WebSockets adapter integration.</li>
+                    <ul>
+                      <li>Click the elipsis, the three dots, to the right of the KpsPortfolio channel.</li>
+                      <li>Click "add integrations".</li>
+                      <li>Click "Build".</li>
+                      <li>Click "Add a new integration".</li>
+                        <ul>
+                          <li>Set "Integration Name:" to "SendMsgsToTwistToWsAdapter".</li>
+                          <li>Set "Description:" to "Posts messages from Twist to the TwistToWsAdapter running in an EC2 instance."</li>
+                          <li>Set "Integration type" to "Thread Updates integration".</li>
+                          <li>Click "Create my integration".</li>
+                        </ul>
+                      <li>Webhooks</li>
+                        <ul>
+                          <li>Set "Outgoing webhook URL:" to "https://agw.kpsportfolio.info/doistdemo/triggerdoistdemo".</li>
+                          <li>Click "Update URLs".</li>
+                        </ul>
+                      <li>Buffer and Schedule</li>
+                        <ul>
+                          <li>Set "Default buffering:" to "Port in realtime (buffering)".</li>
+                        </ul>
+                      <li>Installation</li>
+                        <ul>
+                          <li>For "Post to channel:" select "KpsPortfolio".</li>
+                          <li>For "And in following thread:" select "DoistDemo".</li>
+                          <li>For "Who do you want to notify:" select "Everyone in channel".</li>
+                        </ul>
+                      <li>Click "Install Integration".</li>
+                    </ul>
+                </ul>
             </ul>
           </div>
         </div>

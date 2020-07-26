@@ -42,8 +42,8 @@ export default class NavMenu extends Component {
           <h1 className="PageHeading">About KPS Portfolio</h1>
           <img className="KpsPhoto" src={require("./Images/KpsButler.png")}/>
           <p className="TextBody">
-            Hello!  My name is Kevin and I'll be your server today. I realize that I'm dressed like the proverbial butler, Jeeves,
-            but it emphasizes the goal of being at your service.
+            Hello!  My name is Kevin and I'll be your server today. I realize that I'm dressed like the butler, Jeeves,
+            but it emphasizes the goal to be of service.
           </p>
           <p className="TextBody">
             May I begin by suggesting a non-alcoholic apertif (a contradiction in terms, I know) which is Living Water? There is nothing else like it.
@@ -53,7 +53,7 @@ export default class NavMenu extends Component {
           </p>
           <br/><p className="TextBody">
             May I also tell you about our facilities and services?
-            The design firm, Reactjs and JSX, served as the architect and general contractor for our dining facility. Major subcontractors include CSS Inc.
+            The design firm, ReactJSX, served as the architect and general contractor for our dining facility. Major subcontractors include CSS Inc.
             and the HTML 5 Agency.
           </p>
           <br/><p className="TextBody">
@@ -65,25 +65,23 @@ export default class NavMenu extends Component {
               >KpsPortfolio Pantry.</a>
         </p>
           <br/><p className="TextBody">
-            Appliances are provided by the Always Waiting to Serve Corporation. The AWS EC2 oven and cooktop are some of the best. Our dishes are
-            cooked to perfection after being prepared using our unique Command assembly Line Interface with our counter tops, mixers, bowls and utensils.
+            Appliances are provided by the Always Waiting to Serve Corporation. We use our AWS EC2 oven and cooktops to prepare our dishes to perfection.
+            Our unique Condiment assembly Line Interface directs the use of counter tops, mixers, bowls and utensils to complete each meal.
           </p>
           <br/><div className="TextBody">
-            Our communication system
-            provides a Gateway (like the swinging doors to the kitchen where servers enter and exit) from servers to manager and chef. We want
-            to make sure orders and any other communications from our customers are accurate and secure.
+            Our AWS Gateway enables by-directional communication between servers on the floor and the manager and chef.
+            It reminds me of the doors to the kitchen which can swing inward and outward as people enter and exit. We want
+            to make sure orders and any other requests from our customers are accurate and secure.
           </div>
           <br/><div className="TextBody">
             For childrens' enjoyment, we have a coloring booklet called "Mary Had A Little Lambda". This keeps them engaged while their
             meal is being prepared.
           </div>
           <br/><div className="TextBody">
-            For childrens' safety, we introduced a special mechanism called "Webbings for Sockets" to protect them from open electrial outlets.
+            For childrens' safety, we introduced a special mechanism called "Web for Sockets" to protect them from open electrial outlets.
             The outlets are covered with a thin, elastic webbing that keeps children from touching the metal in the socket. The webbing and the
-            socket receptor communicate with each other as they determine whether or not to allow current to flow when something is pushed into the socket.
-            The webbing senses the shape and dimensions of the plug and transmits that information to the socket. The socket determines if
-            the object being inserted is a true, correct plug (and not a child trying to insert a couple of pennies!).
-            If so, electrical current is switched on.
+            socket receptor work together to only allow current flow when an actual plug is inserted. Should a child try and insert
+            something else (paper clips, for example), current will not flow.
           </div>
           <br/><div className="TextBody">
             But I'm going on and on. Let me submit your order. Forgive me while I speak into my lapel.
@@ -125,8 +123,8 @@ export default class NavMenu extends Component {
             <span gospel-tooltip="His whole creation, all its people and you.">loved the world so much</span><br/>
             <span gospel-tooltip="God gave his most precious Treasure for you.">that he gave his one and only Son</span><br/>
             <span gospel-tooltip="That he is the Son of God, Savior and Lord. That he died on the cross for your sins and rose from the dead.">so that everyone who believes in him</span><br/>
-            <span gospel-tooltip="Be punished in hell forever because of your sins.">will not perish</span><br/>
-            <span gospel-tooltip="To know God and glorify and enjoy him forever in heaven.">but have eternal life.</span><br/>
+            <span gospel-tooltip="Be separated from God and punished in hell forever because of your sins.">will not perish</span><br/>
+            <span gospel-tooltip="To know God and glorify and enjoy him forever both now and in heaven.">but have eternal life.</span><br/>
           </div>
           <div className="GospelEpilog">
             <p>
@@ -290,7 +288,7 @@ export default class NavMenu extends Component {
         <div>&nbsp;</div>
         <div>&nbsp;<i className="far fa-folder" style={{"color": "#ffffff"}}>&nbsp;&nbsp;</i><a href="javascript:void(0)" onClick={this.displayGospel}>The&nbsp;Gospel</a></div>
         <div>&nbsp;</div>
-        <div>&nbsp;<i className="far fa-folder" style={{"color": "#ffffff"}}>&nbsp;&nbsp;</i><a href="javascript:void(0)" onClick={this.displaySpotOfJavaDemo}>SpotOfJava&nbsp;Demo</a></div>
+        <div>&nbsp;<i className="far fa-folder" style={{"color": "#ffffff"}}>&nbsp;&nbsp;</i><a href="javascript:void(0)" onClick={this.displaySpotOfJavaDemo}>Spot-Of-Java&nbsp;Demo</a></div>
         <div>&nbsp;</div>
         <div>&nbsp;<i className="far fa-folder" style={{"color": "#ffffff"}}>&nbsp;&nbsp;</i><a href="javascript:void(0)" onClick={this.displayDoistDemo}>Doist&nbsp;Demo</a></div>
         <div>&nbsp;</div>

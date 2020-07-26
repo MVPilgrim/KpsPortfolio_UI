@@ -18,11 +18,11 @@ export default class SOJPopupAbout extends Component {
       retEle = (
         <div className="SOJPopup"  style={{"overflow": "scroll"}}>
           <i className="far fa-window-close" style={{"float": "right","fontSize": "25px","margin": "5px 10px 0 0","color": "#555555"}} onClick={this.closePopup}></i>
-          <h1>About Spot of Java</h1>
+          <h1>About Spot-of-Java</h1>
           <div className="PopupTextBody">
             <p>
-              The SpotOfJava Demonstration currently has a single "Spot of Java" - SOJBasic with a "Hello World!" implementation. Over time, I plan on adding
-              more SOJs to demonstrate proficiency with various Java capabilities.
+              At the moment, there is only one Spot-of-Java in my portfolio. However, I intend to add a number of "Spots-of-Java" with each one demonstrating aspects
+              of Java that I've learned (yes, it does sound like "vaporware"). I hope you will find them interesting and useful if they are new to you.
             </p>
           </div>
         </div>
