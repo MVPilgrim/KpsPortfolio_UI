@@ -18,6 +18,7 @@ export default class NavMenu extends Component {
     this.displayDoistDemo         = this.displayDoistDemo.bind(this);
     this.displayVirtualSupport    = this.displayVirtualSupport.bind(this);
     this.displayChildlikeHomepage = this.displayChildlikeHomepage.bind(this);
+    this.displayJenkinsDemo       = this.displayJenkinsDemo.bind(this);
 
     this.mainViewRef     = props.mainViewRef;
     this.reactDomRender  = ReactDom.render;
@@ -277,6 +278,17 @@ export default class NavMenu extends Component {
     );
   }
 
+    displayJenkinsDemo(event) {
+      this.reactDomRender (
+        <div>
+          <TopBar className="TopBar" displayHeading={true}/>
+          <NavMenu/>
+
+        </div>,
+        this.targetContainer
+      );
+    }
+
   render() {
     return(
       <div className="NavMenu">
@@ -295,6 +307,8 @@ export default class NavMenu extends Component {
         <div>&nbsp;<i className="far fa-folder" style={{"color": "#ffffff"}}>&nbsp;&nbsp;</i><a href="javascript:void(0)" onClick={this.displayVirtualSupport}>Virtual&nbsp;Support</a></div>
         <div>&nbsp;</div>
         <div>&nbsp;<i className="far fa-folder" style={{"color": "#ffffff"}}>&nbsp;&nbsp;</i><a href="javascript:void(0)" onClick={this.displayChildlikeHomepage}>Childlike&nbsp;Homepage</a></div>
+        <div>&nbsp;</div>
+        <div>&nbsp;<i className="far fa-folder" style={{"color": "#ffffff"}}>&nbsp;&nbsp;</i><a href="javascript:void(0)" onClick={this.displayJenkinsDemo}>Jenkins&nbsp;Demo</a></div>
      </div>
     );
   }
