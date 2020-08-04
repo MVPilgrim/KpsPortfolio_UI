@@ -12,8 +12,8 @@
     "test:watch": "nwb test-react --server"
   },
   "dependencies": {
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-html5video": "^2.5.1"
   },
   "devDependencies": {
