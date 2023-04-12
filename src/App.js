@@ -4,6 +4,7 @@ import NavMenu from './NavMenu.js'
 import MainView from './MainView.js'
 
 import React, {Component} from 'react'
+//import ReactDom from 'react-dom';
 
 class App extends Component {
   constructor(props) {

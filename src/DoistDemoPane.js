@@ -8,6 +8,7 @@ import DDPopupInitDemo   from './DDPopupInitDemo.js'
 import DDPopupDirections from './DDPopupDirections.js'
 import DDPopupDevStatus  from './DDPopupDevStatus.js'
 
+
 export default class DoistDemoPane extends Component {
   constructor(props) {
     super(props);
@@ -35,7 +36,7 @@ export default class DoistDemoPane extends Component {
 
   handleInitButtonClick(event) {
     this.clearAllButtonClicks()
-    
+
     var wsid=Math.random() + ""
     var result = wsid.match(/..(.*)/)
     wsid = result[1]
