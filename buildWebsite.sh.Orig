@@ -1,0 +1,36 @@
+#!/bin/bash
+
+#nginxPath=/usr/share/nginx/html
+nginxPath=/usr/share/nginx/html/html2
+sudo mkdir -p $nginxPath
+
+kpWebsite=/home/ec2-user/KpsPortfolio/KpsPortfolio_Website/src
+#kpDoistDemo=/home/ec2-user/KpsPortfolio/KpsPortfolio_DoistDemo/ui/src
+#kpSpotOfJava=/home/ec2-user/KpsPortfolio/KpsPortfolio_SpotOfJava/ui/reactjs/src
+
+clear
+
+# Copy src from DoistDemo and SpotOfJava
+
+# DoistDemo
+cp $kpDoistDemo/ButtonDoistDemo.js     $kpWebsite
+cp $kpDoistDemo/DDPopupAbout.js        $kpWebsite
+cp $kpDoistDemo/DDPopupDevStatus.js    $kpWebsite
+cp $kpDoistDemo/DDPopupDirections.js   $kpWebsite
+cp $kpDoistDemo/DDPopupInitDemo.js     $kpWebsite
+cp $kpDoistDemo/DoistDemoMain.js       $kpWebsite
+cp $kpDoistDemo/DoistDemoPane.js       $kpWebsite
+
+# SpotOfJava
+cp $kpSpotOfJava/ButtonSpotOfJava.js   $kpWebsite
+cp $kpSpotOfJava/SOJPopupAbout.js      $kpWebsite
+cp $kpSpotOfJava/SOJPopupBasic.js      $kpWebsite
+cp $kpSpotOfJava/SOJPopupDirections.js $kpWebsite
+cp $kpSpotOfJava/SpotOfJavaMain.js     $kpWebsite
+cp $kpSpotOfJava/SpotOfJavaPane.js     $kpWebsite
+
+npm run-script build
+
+#sudo rm -f $nginxPath/app* $nginxPath/index.html $nginxPath/runtime* $nginxPath/html/vend*
+sudo rm -f $nginxPath/*
+sudo cp -r dist/* $nginxPath

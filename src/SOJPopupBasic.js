@@ -10,6 +10,7 @@ export default class SOJPopupBasic extends Component {
     this.closePopup      = this.closePopup.bind(this);
     this.queryHello      = this.queryHello.bind(this);
     this.qhParseResponse = this.qhParseResponse.bind(this);
+
     this.msg             = "";
     this.src             = "";
   }
@@ -23,7 +24,6 @@ export default class SOJPopupBasic extends Component {
 
   queryHello() {
     var qhParseResponse = this.qhParseResponse;
-
     var xhrQueryHello = new XMLHttpRequest();
     xhrQueryHello.onreadystatechange = function() {
       if (this.readyState === 4 && this.status === 200) {
@@ -38,6 +38,8 @@ export default class SOJPopupBasic extends Component {
     this.msg = jsonResponse.msg;
     this.src = jsonResponse.src;
     this.forceUpdate();
+
+
   }
 
 
@@ -52,22 +54,21 @@ export default class SOJPopupBasic extends Component {
           <h1 style={{"margin": "1.0% 0.0% 0px 7.5%"}}>SpotOfJava Basic</h1>
           <div className="PopupTextBody">
             <p>
-              The Spot-Of-Java Basic demo queries a Spring Boot microservice running in the IBM Cloud.
-              It displays a "Hello World" type of message. It also displays the Java source code for the microservice producing the message. Click the "Run Demo" link below
-              to see the message and source.
+              The SpotOfJava Basic demo simply queries a Spring Boot microservice running in the IBM Bluemix cloud. But it 
+              shows that the app is successfully deployed and retruns a response. Click on the "Execute Query" link below to retrieve a message.
             </p>
           </div>
 
           <div style={{"margin": "0px 5.0% 0px 17.5%"}}>
-            <a href="javascript:void(0)" onClick={this.queryHello} className="SOJ" style={{"margin": "0px 5.0% 0px 28.50%","fontSize": "25px"}}>Run Demo</a>
-            <iframe srcdoc={this.msg} name="SOJBasicIframe" style={{"margin": "0px 0.0% 0px 23.0%"}} width="35%" height="35px" title="SOJBasicIframe">
+            <a href="javascript:void(0)" onClick={this.queryHello} className="SOJ" style={{"margin": "0px 5.0% 0px 25.0%","fontSize": "25px"}}>Execute Query</a>
+            <iframe srcdoc={this.msg} name="SOJBasicIframe" style={{"margin": "0px 5.0% 0px 23.0%"}} width="35%" height="35px" title="SOJBasicIframe">
             </iframe>
           </div>
 
           <div style={{"margin": "0px 5.0% 0px 5.0%"}}>
             <p></p>
-            <p className="SOJ" style={{"margin": "0px 5.0% 0px 32.0%","fontSize": "25px"}}>SOJ-Basic Source</p>
-            <iframe srcdoc={this.src} name="SOJBasicSrcIframe" style={{"margin": "0px 0.0% 0px 0.0%","fontSize": "32px"}} width="100%" height="425px" title="SOJBasicSrcIframe">
+            <p className="SOJ" style={{"margin": "0px 5.0% 0px 25.0%","fontSize": "25px"}}>SpotOfJava Basic Source</p>
+            <iframe srcdoc={this.src} name="SOJBasicSrcIframe" style={{"margin": "0px 0.0% 0px 0.0%"}} width="100%" height="425px" title="SOJBasicSrcIframe">
             </iframe>
           </div>
         </div>
