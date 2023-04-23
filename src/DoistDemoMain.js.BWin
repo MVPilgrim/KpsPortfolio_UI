@@ -1,0 +1,53 @@
+import React, {Component} from 'react'
+
+import DoistDemoPane from './DoistDemoPane.js'
+
+export default class DoistDemoMain extends Component {
+  constructor(props) {
+    super(props);
+
+    this.openTodoist = this.openTodoist.bind(this);
+    this.closeTodoist = this.closeTodoist.bind(this);
+
+    this.openTwist = this.openTwist.bind(this);
+    this.closeTwist = this.closeTwist.bind(this);
+
+    this.externalWindowTodoist = this.openTodoist();
+    this.externalWindowTwist   = this.openTwist();
+  }
+
+  openTodoist() {
+    var todoistWin = window.open('https://todoist.com','_blank','width=800,height=400,left=850,top=50');
+    return todoistWin;
+  }
+  closeTodoist() {
+    if (this.externalWindowTodoist != null) {
+      this.externalWindowTodoist.close();
+    }
+  }
+
+  openTwist() {
+    var twistWin = window.open('https://twist.com',  '_blank',  'width=800,height=400,left=850,top=450');
+    return twistWin;
+  }
+  closeTwist() {
+    if (this.externalWindowTwist != null) {
+      this.externalWindowTwist.close();
+    }
+  }
+
+  render() {
+    return(
+      <div>
+        <div name="DoistDemoPane" className="DoistDemoPane">
+          <DoistDemoPane/>
+        </div>
+     </div>
+    );
+  }
+
+  componentWillUnmount() {
+    this.closeTodoist();
+    this.closeTwist();
+  }
+}

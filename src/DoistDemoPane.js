@@ -8,6 +8,7 @@ import DDPopupInitDemo   from './DDPopupInitDemo.js'
 import DDPopupDirections from './DDPopupDirections.js'
 import DDPopupDevStatus  from './DDPopupDevStatus.js'
 
+
 export default class DoistDemoPane extends Component {
   constructor(props) {
     super(props);
@@ -21,6 +22,7 @@ export default class DoistDemoPane extends Component {
     this.closeDirections             = this.closeDirections.bind(this)
     this.closeInitDemo               = this.closeInitDemo.bind(this)
     this.closeDevStatus              = this.closeDevStatus.bind(this)
+    this.clearAllButtonClicks        = this.clearAllButtonClicks.bind(this)
 
     this.state = {
       msgArray : [],
@@ -33,6 +35,8 @@ export default class DoistDemoPane extends Component {
   }
 
   handleInitButtonClick(event) {
+    this.clearAllButtonClicks()
+
     var wsid=Math.random() + ""
     var result = wsid.match(/..(.*)/)
     wsid = result[1]
@@ -108,7 +112,7 @@ export default class DoistDemoPane extends Component {
   }
 
   closeWebsocket() {
-    ws = this.getState("ws")
+    var ws = this.getState("ws")
     ws.onclose = function () {}; // disable onclose handler first
     ws.close();
   }
@@ -122,7 +126,7 @@ export default class DoistDemoPane extends Component {
     }
     return rc
   }
-  
+
   invokeLambdaFunction(wsid) {
     console.log("invokeLambdaFunction() entered. wsid=" + wsid)
 
@@ -139,6 +143,7 @@ export default class DoistDemoPane extends Component {
   }
 
   handleAboutButtonClick(event) {
+    this.clearAllButtonClicks()
     this.setState({displayAbout: true})
   }
   closeAbout(event) {
@@ -146,6 +151,7 @@ export default class DoistDemoPane extends Component {
   }
 
   handleDirectionsButtonClick(event) {
+    this.clearAllButtonClicks()
     this.setState({displayDirections: true})
   }
   closeDirections(event) {
@@ -161,21 +167,29 @@ export default class DoistDemoPane extends Component {
   }
 
   handleDevStatusButtonClick(event) {
+    this.clearAllButtonClicks()
     this.setState({displayDevStatus: true})
   }
   closeDevStatus(event) {
     this.setState({displayDevStatus: false})
   }
 
+  clearAllButtonClicks(event) {
+    this.setState({displayAbout: false})
+    this.setState({displayDirections: false})
+    this.setState({displayInitDemo: false})
+    this.setState({displayDevStatus: false})
+  }
+
   render() {
     return(
-      <div>
+      <div style={{"left": "10%"}}>
         <TopBar className="DoistDemoTopBar displayHeading={true}"/>
-        <ButtonDoistDemo label="Init Demo" style={{"width": "60px"}} handleClick={this.handleInitButtonClick}/>
-        <ButtonDoistDemo label="Directions" style={{"left": "13.5%", "width": "60px"}} handleClick={this.handleDirectionsButtonClick}/>
-        <ButtonDoistDemo label="Clear Log" style={{"left": "17.5%", "width": "60px"}} handleClick={this.handleClearLogButtonClick}/>
-        <ButtonDoistDemo label="About" style={{"left": "21.5%"}} handleClick={this.handleAboutButtonClick}/>
-        <ButtonDoistDemo label="Dev Status" style={{"left": "24.0%", "width": "70px"}} handleClick={this.handleDevStatusButtonClick}/>
+        <ButtonDoistDemo label="About" style={{"left": "0%"}} handleClick={this.handleAboutButtonClick}/>
+        <ButtonDoistDemo label="Directions" style={{"left": "2%"}} handleClick={this.handleDirectionsButtonClick}/>
+        <ButtonDoistDemo label="Init Demo" style={{"left": "8%"}} handleClick={this.handleInitButtonClick}/>
+        <ButtonDoistDemo label="Clear Log" style={{"left": "10%", "width": "40px"}} handleClick={this.handleClearLogButtonClick}/>
+        <ButtonDoistDemo label="Dev Status" style={{"left": "11%", "width": "40px"}} handleClick={this.handleDevStatusButtonClick}/>
         <div className="DoistDemoHeading">Doist Demo Message Log</div>
         <DisplayMsg msgArray={this.state.msgArray}/>
         <DDPopupAbout displayPopup={this.state.displayAbout} closeCallback={this.closeAbout}/>
@@ -200,7 +214,7 @@ class DisplayMsg extends Component {
     if (this.props.msgArray.length > 0) {
       retEle = (
         <ul className="DisplayLog">
-          {this.props.msgArray.map((item,index) => 
+          {this.props.msgArray.map((item,index) =>
             <div>{item}</div>
           )}
         </ul>

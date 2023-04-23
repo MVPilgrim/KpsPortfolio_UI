@@ -23,40 +23,21 @@ export default class DDPopupAbout extends Component {
           <h1>About Doist Demo</h1>
           <div className="PopupTextBody">
             <p>
-              The Doist Demo illustrates using the integrations capabilities of the Doist products Todist and Twist
-              along with a number of other technologies. Here is a list of the technologies.
-              <ul>
-                <li>Todoist integration with Twist</li>
-                <li>Twist call to an external API</li>
-                <li>Reactjs and JSX UI</li>
-                <li>Javascript</li>
-                <li>Websockets</li>
-                <li>Amazon Web Services</li>
-                  <ul>
-                    <li>EC2</li>
-                    <li>VPC</li>
-                    <li>Elastic IP</li>
-                    <li>API Gateway</li>
-                    <li>Lambda Function</li>
-                  </ul>
-                <li>nginx web server</li>
-                <li>nodejs</li>
-                <li>nwb package builder</li>
-              </ul>
+              The Doist Demo illustrates using the integration capabilities of the Doist products Todist and Twist with code I've written.
             </p>
             <p>
               Here is the processing sequence for the demo.
               <ul>
                 <li>The user clicks "Init Demo".</li>
-                <li>The user creates a task from the text displayed in the popup.</li>
+                <li>The user creates a Todoist task from the text displayed in the popup (for example, cmd="start DoistDemo" wsid="8728631284717989").</li>
                 <li>Todoist sends a "Task added" message to Twist.</li>
                 <li>Twist forwards the message using the configured external URL.</li>
-                <li>The node TwistToWs.js component receives the start messaged and forwards it to the browser via Web Sockets.</li>
-                <li>Javascript running in the browser receives the Web socket message and displays it to the log screen..</li>
+                <li>The nodejs TwistToWs.js component receives the message from Twist and forwards it to the browser via a Web Sockets connection.</li>
+                <li>Javascript running in the browser receives the Web Sockets message and displays it to the log screen..</li>
                 <li>Since the message is "start demo", the Javascript code calls the AWS Lambda Function.</li>
-                <li>The Lambda function sends "start" and then "end" messages to Twist via a Twist integration API.</li>
-                <li>Twist sends the messages from the Lambda function to TwistToWs.</li>
-                <li>TwistToWs forwards the messages to the browser via the Web Socket.</li>
+                <li>The Lambda function sends "start" and then "end" messages to Twist via the Twist integration API.</li>
+                <li>Twist sends the messages from the Lambda function to TwistToWs.js.</li>
+                <li>TwistToWs.js forwards the messages to the browser via the Web Socket.</li>
                 <li>Javascript in the browser displays the messages in the message log UI pane.</li>
               </ul>
             </p>

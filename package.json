@@ -1,25 +1,25 @@
 {
-  "name": "DoistDemo",
+  "name": "KpsPortfolio",
   "version": "1.0.0",
-  "description": "DoistDemo",
+  "description": "KpsPortfolio",
   "private": true,
   "scripts": {
     "build": "nwb build-react-app",
     "clean": "nwb clean-app",
-    "start": "nwb --host 172.31.86.166 --port 3000 serve-react-app",
+    "start": "nwb --host localhost --port 3000 serve-react-app",
     "test": "nwb test-react",
     "test:coverage": "nwb test-react --coverage",
     "test:watch": "nwb test-react --server"
   },
   "dependencies": {
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-html5video": "^2.5.1"
   },
   "devDependencies": {
     "nwb": "0.23.x"
   },
-  "author": "",
+  "author": "Kevin P. Stephenson",
   "license": "MIT",
   "repository": ""
 }

@@ -69,7 +69,7 @@ a:hover, a:active {
 }
 
 .DoistDemoTopBar {
-  height: 5.1%;
+  height: 4.57%;
   width: 45.5%;
   position: fixed;
   top: 6.5%;
@@ -80,7 +80,7 @@ a:hover, a:active {
 
 .DoistDemoHeading {
   top: 12.0%;
-  left: 20.0%;
+  left: 23.5%;
   position: fixed;
   text-align: center;
   color: #5a5a5a;
@@ -89,9 +89,13 @@ a:hover, a:active {
 }
 
 .DoistDemoButton {
+  /*
+  height: 22vw;
+  width: 40vw;
+  */
   height: 22px;
   width: 40px;
-  position: fixed;
+  position: relative;
   top: 7.4%;
   left: 9.5%;
   background-color: darkcyan;
@@ -101,7 +105,7 @@ a:hover, a:active {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 12px;
+  font-size: 16px;
   margin: 1px 1px;
   cursor: pointer;
 }
@@ -153,7 +157,7 @@ h1 {
   color: #505050;
   font-family: Arial, Helvetica, serif;
   font-size: 4em;
-  
+
 }
 
 .TextBody {
@@ -186,62 +190,6 @@ h1 {
   text-align: center;
   color: #505050;
   font-family: Arial, Helvetica, serif;
-  font-size: 3em;
-}
-
-.GospelText {
-  text-align: center;
-  color: crimson;
-  font-family: Arial, Helvetica, serif;
-  font-size: 1.5em;
-}
-
-.GospelEpilog {
-  text-align: center;
-  color: black;
-  font-family: "Arial Black", Helvetica, serif;
-  font-size: 2em;
-}
-
-.GospelResources {
-  margin: 0px 350px 0px 350px;
-  text-align: center;
-  color: black;
-  font-family: "Times New Roman", Helvetica, serif;
-  font-size: 1.3em;
-}
-
-a.Gospel:link {
-  color: "DarkRed";
-}
-a.Gospel:visited {
-  color: "DarkRed";
-}
-a.Gospel:hover {
-  color: red;
-}
-
-.GospelPrayer {
-  text-align: justify;
-  text-justify: inter-word;
-  color: #4d4d4d;
-  font-family: Arial, Helvetica, serif;
-  font-size: 1.3em;
-  margin: 0px 400px 0px 400px;
-}
-
-.KpsPhoto {
-  height: 216px;
-  width: 228px;
-  position: fixed;
-  top: 9.0%;
-  left: 12.0%;
-}
-
-.GospelHeading {
-  text-align: center;
-  color: #505050;
-  font-family: Arial, Helvetica, serif;
   font-size: 2em;
 }
 
@@ -259,20 +207,12 @@ a.Gospel:hover {
   font-size: 2em;
 }
 
-.GospelResources {
-  margin: 0px 350px 0px 350px;
-  text-align: center;
-  color: black;
-  font-family: "Times New Roman", Helvetica, serif;
-  font-size: 1.3em;
-}
-
 a.Gospel:link {
-  color: SeaGreen;
+  color: darkcyan;
   font-weight: bold;
 }
 a.Gospel:visited {
-  color: SeaGreen;
+  color: darkcyan;
   font-weight: bold;
 }
 a.Gospel:hover {
@@ -282,11 +222,20 @@ a.Gospel:hover {
 
 .GospelPrayer {
   text-align: justify;
-  text-justify: inter-word;
+
   color: #4d4d4d;
   font-family: Arial, Helvetica, serif;
   font-size: 1.3em;
-  margin: 0px 400px 0px 400px;
+  margin: 0px 30% 0px 30%;
+}
+
+.GospelResources {
+  position: relative;
+  margin: 0 0 0 30%;
+  text-align: left;
+  color: black;
+  font-family: "Times New Roman", Helvetica, serif;
+  font-size: 1.3em;
 }
 
 [gospel-tooltip]:hover {
@@ -318,10 +267,10 @@ a.Gospel:hover {
 [gospel-tooltip]:hover::after {
   all: initial;
   display: inline-block;
-  width: 0; 
-  height: 0; 
+  width: 0;
+  height: 0;
   border-left: 10px solid transparent;
-  border-right: 10px solid transparent;		  
+  border-right: 10px solid transparent;
   border-top: 10px solid #1a1a1a;
   position: absolute;
   bottom: auto;
@@ -400,10 +349,10 @@ a.Gospel:hover {
 [clhp-tooltip]:hover::after {
   all: initial;
   display: inline-block;
-  width: 0; 
-  height: 0; 
+  width: 0;
+  height: 0;
   border-left: 10px solid transparent;
-  border-right: 10px solid transparent;		  
+  border-right: 10px solid transparent;
   border-top: 10px solid #1a1a1a;
   position: absolute;
   bottom: auto;
@@ -420,6 +369,20 @@ a.Gospel:hover {
 /*
  *  * Start of SpotOfJavaDemo css
  *  */
+
+
+ a.MiscLink:link {
+   color: darkcyan;
+   font-weight: bold;
+ }
+ a.MiscLink:visited {
+   color: darkcyan;
+   font-weight: bold;
+ }
+ a.MiscLink:hover {
+   color: darkgreen;
+   font-weight: bold;
+ }
 
 .SpotOfJavaDemoPane {
   height: 93.5%;
@@ -485,11 +448,10 @@ a.Gospel:hover {
 }
 
 a.SOJ:link, a:visited {
-  color:  darkred;
+  color:  darkcyan;
   text-align: center;
   text-decoration: none;
 }
 a.SOJ:hover, a:active {
-  color: darkcyan;
+  color: darkgreen;
 }
-

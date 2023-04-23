@@ -16,6 +16,7 @@ export default class SpotOfJavaPane extends Component {
     this.closeAbout                  = this.closeAbout.bind(this)
     this.closeDirections             = this.closeDirections.bind(this)
     this.closeBasic                  = this.closeBasic.bind(this)
+    this.clearAllButtonClicks        = this.clearAllButtonClicks.bind(this)
 
     this.state = {
       msgArray : [],
@@ -27,6 +28,7 @@ export default class SpotOfJavaPane extends Component {
   }
 
   handleBasicButtonClick(event) {
+    this.clearAllButtonClicks()
     this.setState({displayBasic: true})
   }
   closeBasic(event) {
@@ -34,6 +36,7 @@ export default class SpotOfJavaPane extends Component {
   }
 
   handleAboutButtonClick(event) {
+    this.clearAllButtonClicks()
     this.setState({displayAbout: true})
   }
   closeAbout(event) {
@@ -41,13 +44,20 @@ export default class SpotOfJavaPane extends Component {
   }
 
   handleDirectionsButtonClick(event) {
+    this.clearAllButtonClicks()
     this.setState({displayDirections: true})
   }
   closeDirections(event) {
     this.setState({displayDirections: false})
   }
 
-  
+  clearAllButtonClicks(event) {
+    this.setState({displayBasic: false})
+    this.setState({displayAbout: false})
+    this.setState({displayDirections: false})
+  }
+
+
   render() {
     return(
       <div>
@@ -55,7 +65,7 @@ export default class SpotOfJavaPane extends Component {
 
         <ButtonSpotOfJava label="About" style={{"left": "9.5%"}} handleClick={this.handleAboutButtonClick}/>
         <ButtonSpotOfJava label="Directions" style={{"left": "12.0%", "width": "60px"}} handleClick={this.handleDirectionsButtonClick}/>
-        <ButtonSpotOfJava label="SOJ Basic" style={{"left": "16.0%", "width": "80px"}} handleClick={this.handleBasicButtonClick}/>
+        <ButtonSpotOfJava label="SOJ-Basic" style={{"left": "16.0%", "width": "80px"}} handleClick={this.handleBasicButtonClick}/>
 
         <div className="SpotOfJavaDemoHeading">Spot-of-Java Demo</div>
 
