@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -v
+
 nginxPath=/usr/share/nginx/html
 #nginxPath=/usr/share/nginx/html/html2
 sudo mkdir -p $nginxPath
