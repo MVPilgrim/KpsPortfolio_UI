@@ -35,12 +35,9 @@ export default class BrowserWindow extends React.Component {
   }
 
   configThisWindow() {
-    this.setState({ todoistDemoWidth: window.innerWidth, todoistDemoHeight: window.innerHeight, todoistDemoLeft: window.inner });
+    this.setState({ jenkinsDemoWidth: window.innerWidth, jenkinsDemoHeight: window.innerHeight, jenkinsDemoLeft: window.inner });
   }
-  configTodoistWindow() {
-    this.setState({ width: window.innerWidth, height: window.innerHeight });
-  }
-  configTwistWindow() {
+  configJenkinsWindow() {
     this.setState({ width: window.innerWidth, height: window.innerHeight });
   }
 

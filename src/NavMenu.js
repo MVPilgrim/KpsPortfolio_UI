@@ -172,17 +172,6 @@ export default class NavMenu extends Component {
     );
   }
 
-  displayDoistDemo(event) {
-    this.reactDomRender (
-      <div>
-        <TopBar className="TopBar" displayHeading={true}/>
-        <NavMenu/>
-        <DoistDemoMain/>
-      </div>,
-      this.targetContainer
-    );
-  }
-
   displayVirtualSupport(event) {
     this.reactDomRender (
       <div>
@@ -278,16 +267,16 @@ export default class NavMenu extends Component {
     );
   }
 
-    displayJenkinsDemo(event) {
-      this.reactDomRender (
-        <div>
-          <TopBar className="TopBar" displayHeading={true}/>
-          <NavMenu/>
-
-        </div>,
-        this.targetContainer
-      );
-    }
+  displayJenkinsDemo(event) {
+    this.reactDomRender (
+      <div>
+        <TopBar className="TopBar" displayHeading={true}/>
+        <NavMenu/>
+        <JenkinsMain/>
+      </div>,
+      this.targetContainer
+    );
+  }
 
   render() {
     return(
