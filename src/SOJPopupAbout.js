@@ -21,7 +21,7 @@ export default class SOJPopupAbout extends Component {
           <h1>About Spot of Java</h1>
           <div className="PopupTextBody">
             <p>
-              KPS 04-26-2023: The SpotOfJava Demonstration currently has a single "Spot of Java" - a "Hello World!" implementation. Over time, I plan on adding
+              KPS 04-28-2023-0922: The SpotOfJava Demonstration currently has a single "Spot of Java" - a "Hello World!" implementation. Over time, I plan on adding
               more "Spots" to demonstrate proficiency with various Java capabilities.
             </p>
           </div>
