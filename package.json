@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "build": "nwb build-react-app",
-    "build:dev": "SET NODE_ENV=development && nwb build-react-app",
+    "build:dev": "NODE_ENV=development nwb build-react-app",
     "clean": "nwb clean-app",
     "start": "nwb --host 172.31.86.166 --port 3000 serve-react-app",
     "test": "nwb test-react",
