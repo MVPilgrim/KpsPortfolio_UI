@@ -4,7 +4,7 @@ import ReactDom from 'react-dom';
 //import 'react-html5video/dist/styles.css';
 
 import TopBar         from './TopBar.js'
-import DoistDemoMain  from './DoistDemoMain.js';
+import JenkinsMain  from './JenkinsMain.js';
 import SpotOfJavaMain from './SpotOfJavaMain.js';
 
 var dummyForceUpdate = 0;
