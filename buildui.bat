@@ -1,3 +1,5 @@
 @echo on
 
-npm run-script build
+rem npm run-script build
+
+npm run-script build:dev
