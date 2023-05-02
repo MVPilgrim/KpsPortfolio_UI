@@ -9,7 +9,7 @@ export default class JenkinsMain extends Component {
     super(props);
 
     this.thisRef = React.createRef();
-    inputRef.current.getBoundingClientRect()
+    {/*inputRef.current.getBoundingClientRect()*/}
   }
 
 
