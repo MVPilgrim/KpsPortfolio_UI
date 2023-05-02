@@ -15,7 +15,6 @@ export default class NavMenu extends Component {
     this.displayAbout             = this.displayAbout.bind(this);
     this.displayGospel            = this.displayGospel.bind(this);
     this.displaySpotOfJavaDemo    = this.displaySpotOfJavaDemo.bind(this);
-    this.displayDoistDemo         = this.displayDoistDemo.bind(this);
     this.displayVirtualSupport    = this.displayVirtualSupport.bind(this);
     this.displayChildlikeHomepage = this.displayChildlikeHomepage.bind(this);
     this.displayJenkinsDemo       = this.displayJenkinsDemo.bind(this);
