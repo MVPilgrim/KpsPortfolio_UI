@@ -46,7 +46,7 @@ export default class JenkinsPane extends Component {
   render() {
     return(
       <div style={{"left": "10%"}}>
-        <TopBar className="JenkinsDemoTopBar displayHeading={true}"/>
+        <TopBar className="JenkinsDemoTopBar" displayHeading={true}/>
         <ButtonJenkinsDemo label="About" style={{"left": "0%"}} handleClick={this.handleAboutButtonClick}/>
         <ButtonJenkinsDemo label="Directions" style={{"left": "2%"}} handleClick={this.handleDirectionsButtonClick}/>
         <JenkinsPopupAbout displayPopup={this.state.displayAbout} closeCallback={this.closeAbout}/>
